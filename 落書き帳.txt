@@ -116,7 +116,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
 【整数（10進数）】
 ~ mincol,padchar,commachar,comma-interval d
 
-mincol 最小桁数
+mincol 最小桁数（カンマ込み）
 padchar パディングに利用すう文字
 commachar カンマに利用すう文字
 comma-interval カンマの間隔
@@ -125,9 +125,14 @@ comma-interval カンマの間隔
 @ 正数のときに+の符号を出力する
 :@ カンマ区切りし、正数のときに+の符号を出力する
 
+(format nil "~6,'0,' ,2:d" 1234) ; "012 34"
+
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cbb.htm
 
 -------------
+
+
+
 -------------
 -------------
 
