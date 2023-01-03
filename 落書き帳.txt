@@ -16,16 +16,20 @@ string int float list
 
 【チルダ】
 ~n~
-n 繰り返し回数
+
+n 繰り返し回数（0以上の整数）
 
 : なし
 @ なし
 :@ なし
 
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cae.htm
+
 -------------
 
 【文字】
 ~c
+
 (format nil "~c" #\a)
 (format nil "~:c" #\Rubout)
 (format nil "~:@c" #\A)
@@ -34,32 +38,42 @@ n 繰り返し回数
 @ プレフィックスに#\をつける
 :@ 印字不可な文字を名称で表示し、Shiftキーについて言及する
 
+http://www.lispworks.com/documentation/HyperSpec/Body/22_caa.htm
+
 -------------
 
 【改行】
 ~n%
-n 繰り返し回数
+
+n 繰り返し回数（0以上の整数）
 
 : なし
 @ なし
 :@ なし
 
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cab.htm
+
 -------------
 
-【カーソルが行の先頭でなければ改行】
+【行の先頭でなければ改行】
 ~n&
-n 繰り返し回数
+
+n 繰り返し回数（0以上の整数）
+
 (format nil "~2&a~2&a")
 
 : なし
 @ なし
 :@ なし
 
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cac.htm
+
 -------------
 
 【改ページ】
 ~n|
-n 繰り返し回数
+
+n 繰り返し回数（0以上の整数）
 
 : なし
 @ なし
@@ -67,7 +81,17 @@ n 繰り返し回数
 
 -------------
 
+【基数】
+~ radix,mincol,padchar,commachar,comma-interval r
 
+radix 基数（2以上の整数）（省略した場合、引数が英語で出力される）
+
+(format nil "~r" 4) ; four
+(format nil "~10r" 4) ; 4
+(format nil "~2r" 4) ; 100
+
+
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
 
 -------------
 -------------
