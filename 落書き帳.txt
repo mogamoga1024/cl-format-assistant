@@ -23,10 +23,6 @@ string int float list
 
 n 繰り返し回数（0以上の整数）
 
-: なし
-@ なし
-:@ なし
-
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cae.htm
 
 -------------
@@ -51,10 +47,6 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_caa.htm
 
 n 繰り返し回数（0以上の整数）
 
-: なし
-@ なし
-:@ なし
-
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cab.htm
 
 -------------
@@ -66,10 +58,6 @@ n 繰り返し回数（0以上の整数）
 
 (format nil "~2&a~2&a")
 
-: なし
-@ なし
-:@ なし
-
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cac.htm
 
 -------------
@@ -78,10 +66,6 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cac.htm
 ~n|
 
 n 繰り返し回数（0以上の整数）
-
-: なし
-@ なし
-:@ なし
 
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cad.htm
 
@@ -199,8 +183,19 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cca.htm
 -------------
 
 【浮動小数点数（指数表記）】
+~ w,d,e,k,overflowchar,padchar,exponentchar e
+
+w
+d
+e
+k
+overflowchar
+padchar
+exponentchar
 
 @ 正数のときに+の符号を出力する
+
+http://www.lispworks.com/documentation/HyperSpec/Body/22_ccb.htm
 
 -------------
 
