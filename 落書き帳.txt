@@ -131,12 +131,63 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cbb.htm
 
 -------------
 
+【整数（2進数）】
+~ mincol,padchar,commachar,comma-interval b
+
+mincol 最小桁数（カンマ込み）
+padchar パディングに利用すう文字
+commachar カンマに利用すう文字
+comma-interval カンマの間隔
+
+: カンマ区切りする
+@ 正数のときに+の符号を出力する
+:@ カンマ区切りし、正数のときに+の符号を出力する
+
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cbc.htm
+
+-------------
+
+【整数（8進数）】
+~ mincol,padchar,commachar,comma-interval o
+
+mincol 最小桁数（カンマ込み）
+padchar パディングに利用すう文字
+commachar カンマに利用すう文字
+comma-interval カンマの間隔
+
+: カンマ区切りする
+@ 正数のときに+の符号を出力する
+:@ カンマ区切りし、正数のときに+の符号を出力する
+
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cbd.htm
+
+-------------
+
+【整数（16進数）】
+~ mincol,padchar,commachar,comma-interval x
+
+mincol 最小桁数（カンマ込み）
+padchar パディングに利用すう文字
+commachar カンマに利用すう文字
+comma-interval カンマの間隔
+
+: カンマ区切りする
+@ 正数のときに+の符号を出力する
+:@ カンマ区切りし、正数のときに+の符号を出力する
+
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cbe.htm
+
+-------------
+
 
 
 -------------
 -------------
-
-
+-------------
+-------------
+-------------
+-------------
+-------------
 
 
 
