@@ -112,6 +112,14 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
 */
 
 -------------
+
+【整数（10進数）】
+~ mincol,padchar,commachar,comma-interval d
+
+TODO
+
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cbb.htm
+
 -------------
 -------------
 -------------
