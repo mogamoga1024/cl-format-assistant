@@ -30,9 +30,9 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cae.htm
 【文字】
 ~c
 
-(format nil "~c" #\a)
-(format nil "~:c" #\Rubout)
-(format nil "~:@c" #\A)
+(format nil "~c" #\a) ; a
+(format nil "~:c" #\Rubout) ; Rubout
+(format nil "~:@c" #\A) ; A
 
 : 印字不可な文字は名称で表示する
 @ プレフィックスに#\をつける
