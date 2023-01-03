@@ -185,15 +185,18 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cca.htm
 【浮動小数点数（指数表記）】
 ~ w,d,e,k,overflowchar,padchar,exponentchar e
 
-w
-d
+w 文字数（小数点込み）
+d 小数点以下の桁数
 e
 k
-overflowchar
-padchar
+overflowchar wの文字数に収まらなかったときに代替で出力する文字
+padchar パディングに利用すう文字
 exponentchar
 
 @ 正数のときに+の符号を出力する
+
+(format nil "~e" 123.456) ; "1.23456e+2"
+
 
 http://www.lispworks.com/documentation/HyperSpec/Body/22_ccb.htm
 
