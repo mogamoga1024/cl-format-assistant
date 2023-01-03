@@ -79,6 +79,8 @@ n 繰り返し回数（0以上の整数）
 @ なし
 :@ なし
 
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cad.htm
+
 -------------
 
 【基数】
