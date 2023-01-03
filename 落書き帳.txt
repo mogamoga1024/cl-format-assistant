@@ -186,17 +186,21 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cca.htm
 ~ w,d,e,k,overflowchar,padchar,exponentchar e
 
 w 文字数
-d 小数点以下の桁数
-e
-k
+d 仮数の小数点以下の桁数
+e 指数部の桁数
+k 仮数の整数部の桁数
 overflowchar wの文字数に収まらなかったときに代替で出力する文字
 padchar パディングに利用する文字
-exponentchar
+exponentchar 仮数部と指数部の間の文字
 
 @ 正数のときに+の符号を出力する
 
 (format nil "~e" 12.34) ; "1.234e+1"
+(format nil "~,1e" 12.34) ; "1.2e+1"
 (format nil "~9e" 12.34) ; " 1.234e+1"
+(format nil "~,,,2e" 12.34) ; "12.34e+0"
+(format nil "~,,5e" 12.34) ; "1.234e+00001"
+(format nil "~,,,,,,'He" 12.34) ; "1.234H+1"
 
 http://www.lispworks.com/documentation/HyperSpec/Body/22_ccb.htm
 
