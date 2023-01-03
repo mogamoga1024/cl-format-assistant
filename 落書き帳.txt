@@ -92,7 +92,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cad.htm
 ~ radix,mincol,padchar,commachar,comma-interval r
 
 radix 基数（2以上の整数）（省略した場合、引数が英語で出力される）
-mincol 最小桁数（0以上の整数）
+mincol 最小文字数（0以上の整数）
 padchar パディングに利用する文字
 
 (format nil "~r" 4) ; "four"
@@ -116,7 +116,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
 【整数（10進数）】
 ~ mincol,padchar,commachar,comma-interval d
 
-mincol 最小桁数（カンマ込み）
+mincol 最小文字数（カンマ込み）
 padchar パディングに利用すう文字
 commachar カンマに利用すう文字
 comma-interval カンマの間隔
@@ -134,7 +134,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cbb.htm
 【整数（2進数）】
 ~ mincol,padchar,commachar,comma-interval b
 
-mincol 最小桁数（カンマ込み）
+mincol 最小文字数（カンマ込み）
 padchar パディングに利用すう文字
 commachar カンマに利用すう文字
 comma-interval カンマの間隔
@@ -150,7 +150,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cbc.htm
 【整数（8進数）】
 ~ mincol,padchar,commachar,comma-interval o
 
-mincol 最小桁数（カンマ込み）
+mincol 最小文字数（カンマ込み）
 padchar パディングに利用すう文字
 commachar カンマに利用すう文字
 comma-interval カンマの間隔
@@ -166,7 +166,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cbd.htm
 【整数（16進数）】
 ~ mincol,padchar,commachar,comma-interval x
 
-mincol 最小桁数（カンマ込み）
+mincol 最小文字数（カンマ込み）
 padchar パディングに利用すう文字
 commachar カンマに利用すう文字
 comma-interval カンマの間隔
@@ -180,8 +180,20 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cbe.htm
 -------------
 
 【浮動小数点数（固定小数点表記）】
+~ w,d,k,overflowchar,padchar f
+
+w 文字数（小数点込み）
+d 小数点以下の桁数
+k
+overflowchar wの文字数に収まらなかったときに代替で出力する文字
+padchar パディングに利用すう文字
 
 @ 正数のときに+の符号を出力する
+
+(format nil "~7,2f" 123.456) ; " 123.46"
+(format nil "~3,2,,'xf" 123.456) ; "xxx"
+
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cca.htm
 
 -------------
 
