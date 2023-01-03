@@ -2,7 +2,7 @@
 ・CommonLispのformat関数での基本的なdirectiveを生成するツールです。
 ・マニアックなものは対応していません。悪しからず。
 ・面倒くさいのでいちいちバリデーションチェックしません。
-  私自身、仕様を100%理解していないので、実際に実行してうまくいくか試してね。
+  私自身、仕様を100%理解していないので、実際に実行して期待通りいくか試してね。
 ・「~r（任意の基数）」を使うことはまずないと思うので未対応です。
 
 
@@ -116,7 +116,14 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
 【整数（10進数）】
 ~ mincol,padchar,commachar,comma-interval d
 
-TODO
+mincol 最小桁数
+padchar パディングに利用すう文字
+commachar カンマに利用すう文字
+comma-interval カンマの間隔
+
+: カンマ区切りする
+@ 正数のときに+の符号を出力する
+:@ カンマ区切りし、正数のときに+の符号を出力する
 
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cbb.htm
 
