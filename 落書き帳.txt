@@ -207,17 +207,26 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_ccb.htm
 -------------
 
 【浮動小数点数（表記方法は自動選択）】
+~ w,d,e,k,overflowchar,padchar,exponentchar g
+
+w 文字数
+d 仮数の小数点以下の桁数
+e 指数部の桁数
+k 仮数の整数部の桁数
+overflowchar wの文字数に収まらなかったときに代替で出力する文字
+padchar パディングに利用する文字
+exponentchar 仮数部と指数部の間の文字
 
 @ 正数のときに+の符号を出力する
 
+http://www.lispworks.com/documentation/HyperSpec/Body/22_ccc.htm
+
 -------------
 -------------
 -------------
 -------------
 -------------
 
-(format nil "~f ~e ~ghoge" 1234.56789 1234.56789 1234.56789)
-(format nil "~f" 999999999999.0)
 
 
 
