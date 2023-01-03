@@ -1,6 +1,10 @@
 
-CommonLispのformat関数での基本的なdirectiveを生成するツールです。
-マニアックなものは対応していません。悪しからず。
+・CommonLispのformat関数での基本的なdirectiveを生成するツールです。
+・マニアックなものは対応していません。悪しからず。
+・面倒くさいのでいちいちバリデーションチェックしません。
+  私自身、仕様を100%理解していないので、実際に実行してうまくいくか試してね。
+・「~r（任意の基数）」を使うことはまずないと思うので未対応です。
+
 
 【出力したいもの】
 いい感じに変換するやつ(Aesthetic)
@@ -30,13 +34,13 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cae.htm
 【文字】
 ~c
 
-(format nil "~c" #\a) ; a
-(format nil "~:c" #\Rubout) ; Rubout
-(format nil "~:@c" #\A) ; A
+(format nil "~c" #\a) ; "a"
+(format nil "~:c" #\Rubout) ; "Rubout"
+(format nil "~:@c" #\A) ; "A"
 
-: 印字不可な文字は名称で表示する
+: 印字不可な文字は名称で出力する
 @ プレフィックスに#\をつける
-:@ 印字不可な文字を名称で表示し、Shiftキーについて言及する
+:@ 印字不可な文字を名称で出力し、Shiftキーについて言及する
 
 http://www.lispworks.com/documentation/HyperSpec/Body/22_caa.htm
 
@@ -83,17 +87,29 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cad.htm
 
 -------------
 
-【基数】
+/*
+【基数】（没）
 ~ radix,mincol,padchar,commachar,comma-interval r
 
 radix 基数（2以上の整数）（省略した場合、引数が英語で出力される）
+mincol 最小桁数（0以上の整数）
+padchar パディングに利用する文字
 
-(format nil "~r" 4) ; four
-(format nil "~10r" 4) ; 4
-(format nil "~2r" 4) ; 100
+(format nil "~r" 4) ; "four"
+(format nil "~10r" 4) ; "4"
+(format nil "~2r" 4) ; "100"
 
+(format nil "~10,3r" 4) ; "  4"
+(format nil "~,6r" 4) ; "four"
+
+(format nil "~10,3,'0r" 4) ; "004"
+(format nil "~10,3,'ar" 4) ; "aa4"
+(format nil "~10,3,'\\r" 4) ; "\\\\4"
+(format nil "~10,3,'\"r" 4) ; "\"\"4"
+(format nil "~10,3,'あr" 4) ; "ああ4"
 
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
+*/
 
 -------------
 -------------
