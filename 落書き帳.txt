@@ -100,7 +100,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
 【整数（10進数）】
 ~ mincol,padchar,commachar,comma-interval d
 
-mincol 最小文字数（カンマ込み）
+mincol 最小文字数
 padchar パディングに利用する文字
 commachar カンマに利用する文字
 comma-interval カンマの間隔
@@ -118,7 +118,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cbb.htm
 【整数（2進数）】
 ~ mincol,padchar,commachar,comma-interval b
 
-mincol 最小文字数（カンマ込み）
+mincol 最小文字数
 padchar パディングに利用する文字
 commachar カンマに利用する文字
 comma-interval カンマの間隔
@@ -134,7 +134,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cbc.htm
 【整数（8進数）】
 ~ mincol,padchar,commachar,comma-interval o
 
-mincol 最小文字数（カンマ込み）
+mincol 最小文字数
 padchar パディングに利用する文字
 commachar カンマに利用する文字
 comma-interval カンマの間隔
@@ -150,7 +150,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cbd.htm
 【整数（16進数）】
 ~ mincol,padchar,commachar,comma-interval x
 
-mincol 最小文字数（カンマ込み）
+mincol 最小文字数
 padchar パディングに利用する文字
 commachar カンマに利用する文字
 comma-interval カンマの間隔
@@ -166,7 +166,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cbe.htm
 【浮動小数点数（固定小数点表記）】
 ~ w,d,k,overflowchar,padchar f
 
-w 文字数（小数点込み）
+w 文字数
 d 小数点以下の桁数
 k 引数を10^k倍にする
 overflowchar wの文字数に収まらなかったときに代替で出力する文字
@@ -185,7 +185,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cca.htm
 【浮動小数点数（指数表記）】
 ~ w,d,e,k,overflowchar,padchar,exponentchar e
 
-w 文字数（小数点込み）
+w 文字数
 d 小数点以下の桁数
 e
 k
@@ -195,8 +195,8 @@ exponentchar
 
 @ 正数のときに+の符号を出力する
 
-(format nil "~e" 123.456) ; "1.23456e+2"
-
+(format nil "~e" 12.34) ; "1.234e+1"
+(format nil "~9e" 12.34) ; " 1.234e+1"
 
 http://www.lispworks.com/documentation/HyperSpec/Body/22_ccb.htm
 
