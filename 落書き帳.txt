@@ -12,7 +12,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_ccd.htm
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cdc.htm
 【~_（条件付き改行）】
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cea.htm
-【~<~;~>（論理ブロック & 正当化）】
+【~<~>（論理ブロック & 正当化）】
 http://www.lispworks.com/documentation/HyperSpec/Body/22_ceb.htm
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cfb.htm
 【~i（インデント）】
@@ -23,7 +23,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_ced.htm
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cfa.htm
 【~*（GoTo）】
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cga.htm
-【~[~;~]（条件式）】
+【~[~]（条件式）】
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cgb.htm
 【~{~}（反復）】
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cgd.htm
@@ -33,9 +33,12 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cgf.htm
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cha.htm
 【~p（複数形）】
 http://www.lispworks.com/documentation/HyperSpec/Body/22_chc.htm
-【】
-【】
-【】
+【~;（句セパレータ）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cia.htm
+【~^（処理を抜ける）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cib.htm
+【~（改行無視）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cic.htm
 
 ===================================================================
 
