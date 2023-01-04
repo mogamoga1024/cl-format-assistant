@@ -2,12 +2,15 @@
 ・CommonLispのformat関数での基本的なdirectiveを生成するツールです。
 ・マニアックなものは対応していません。悪しからず。
 ・面倒くさいのでいちいち厳密なバリデーションチェックしません。（数値の範囲とか）
-  私自身、仕様を100%理解していないので、実際に期待通りに実行されるか試してね。
+・期待通りに実行されるかは君の目で確かめてくれ！
 
 ・未対応のもの（TODOリストではない）
 【~r（任意の基数）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
 【~$（通貨）】http://www.lispworks.com/documentation/HyperSpec/Body/22_ccd.htm
 【~w（プリンター制御変数に従う）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cdc.htm
+【~_（条件付き改行）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cea.htm
+
+
 
 
 【出力したいもの】
