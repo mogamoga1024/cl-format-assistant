@@ -29,7 +29,10 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cgb.htm
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cgd.htm
 【~?（再起処理）】
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cgf.htm
-【】
+【~(~)（大文字小文字変換）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cha.htm
+【~p（複数形）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_chc.htm
 【】
 【】
 【】
