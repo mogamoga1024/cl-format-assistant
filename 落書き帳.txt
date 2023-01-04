@@ -4,6 +4,8 @@
 ・期待通りに実行されるかは君の目で確かめてくれ！
 
 ・対応していないもの
+【~|（改ページ）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cad.htm
 【~r（任意の基数）】
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
 【~$（通貨）】
@@ -83,15 +85,6 @@ n 繰り返し回数（0以上の整数）
 (format nil "~2&a~2&a")
 
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cac.htm
-
--------------
-
-【改ページ】
-~n|
-
-n 繰り返し回数（0以上の整数）
-
-http://www.lispworks.com/documentation/HyperSpec/Body/22_cad.htm
 
 -------------
 
