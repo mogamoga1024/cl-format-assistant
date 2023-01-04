@@ -10,6 +10,8 @@
 【~_（条件付き改行）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cea.htm
 【~<~;~>（論理ブロック）】http://www.lispworks.com/documentation/HyperSpec/Body/22_ceb.htm
 【~i（インデント）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cec.htm
+【~/name/（関数呼び出し）】http://www.lispworks.com/documentation/HyperSpec/Body/22_ced.htm
+
 
 ===================================================================
 
