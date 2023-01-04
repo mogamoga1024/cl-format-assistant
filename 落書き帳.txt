@@ -21,8 +21,18 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cec.htm
 http://www.lispworks.com/documentation/HyperSpec/Body/22_ced.htm
 【~t（カーソル移動）】
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cfa.htm
-
-
+【~*（GoTo）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cga.htm
+【~[~;~]（条件式）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cgb.htm
+【~{~}（反復）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cgd.htm
+【~?（再起処理）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cgf.htm
+【】
+【】
+【】
+【】
 
 ===================================================================
 
