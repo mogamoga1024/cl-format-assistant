@@ -10,19 +10,6 @@
 【~w（プリンター制御変数に従う）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cdc.htm
 【~_（条件付き改行）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cea.htm
 
-
-
-
-【出力したいもの】
-いい感じに変換するやつ(Aesthetic)
-string int float list
-改行 改ページ チルダ
-
-【結果】
-~4d
-
-【コピー】
-
 ===================================================================
 
 【チルダ】
