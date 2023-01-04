@@ -4,13 +4,24 @@
 ・期待通りに実行されるかは君の目で確かめてくれ！
 
 ・対応していないもの
-【~r（任意の基数）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
-【~$（通貨）】http://www.lispworks.com/documentation/HyperSpec/Body/22_ccd.htm
-【~w（プリンター制御変数に従う）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cdc.htm
-【~_（条件付き改行）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cea.htm
-【~<~;~>（論理ブロック）】http://www.lispworks.com/documentation/HyperSpec/Body/22_ceb.htm
-【~i（インデント）】http://www.lispworks.com/documentation/HyperSpec/Body/22_cec.htm
-【~/name/（関数呼び出し）】http://www.lispworks.com/documentation/HyperSpec/Body/22_ced.htm
+【~r（任意の基数）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cba.htm
+【~$（通貨）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_ccd.htm
+【~w（プリンター制御変数に従う）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cdc.htm
+【~_（条件付き改行）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cea.htm
+【~<~;~>（論理ブロック & 正当化）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_ceb.htm
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cfb.htm
+【~i（インデント）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cec.htm
+【~/name/（関数呼び出し）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_ced.htm
+【~t（カーソル移動）】
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cfa.htm
+
 
 
 ===================================================================
