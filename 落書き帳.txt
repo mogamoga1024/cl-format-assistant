@@ -226,18 +226,22 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_ccc.htm
 【美的】
 ~ mincol,colinc,minpad,padchar a
 
-mincol
-colinc
-minpad
-padchar
+mincol 最小文字数（0以上の整数）
+colinc 1回のパディングでpadcharを利用する回数
+minpad パディングの最小回数
+padchar パディングに利用する文字
 
 : nilを()と出力する
-@ 左寄せで出力する
-:@ 左寄せで出力し、かつnilは()と出力する
+@ 右寄せで出力する
+:@ 右寄せで出力し、かつnilは()と出力する
 
 (format nil "~5a" 100) ; "100  "
 (format nil "~5,,,'xa" 100) ; "100xx"
 (format nil "~5,,,'x@a" 100) ; "xx100"
+(format nil "~5,,1,'xa" 100) ; "100xx"
+(format nil "~,,1,'xa" 100) ; "100x"
+(format nil "~5,3,0,'xa" 100) ; "100xxx"
+(format nil "~5,3,1,'xa" 100) ; "100xxxx"
 
 http://www.lispworks.com/documentation/HyperSpec/Body/22_cda.htm
 
@@ -246,5 +250,8 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_cda.htm
 -------------
 -------------
 
-
+* (format nil "~s" #\\)
+"#\\\\"
+* (format nil "~a" #\\)
+"\\"
 
