@@ -222,11 +222,29 @@ exponentchar 仮数部と指数部の間の文字
 http://www.lispworks.com/documentation/HyperSpec/Body/22_ccc.htm
 
 -------------
--------------
--------------
--------------
--------------
 
+【美的】
+~ mincol,colinc,minpad,padchar a
+
+mincol
+colinc
+minpad
+padchar
+
+: nilを()と出力する
+@ 左寄せで出力する
+:@ 左寄せで出力し、かつnilは()と出力する
+
+(format nil "~5a" 100) ; "100  "
+(format nil "~5,,,'xa" 100) ; "100xx"
+(format nil "~5,,,'x@a" 100) ; "xx100"
+
+http://www.lispworks.com/documentation/HyperSpec/Body/22_cda.htm
+
+-------------
+-------------
+-------------
+-------------
 
 
 
