@@ -63,9 +63,9 @@ const createPrinterOptions = function(_directiveChar) {
                 const needPadchar = needParam(this.padchar, this.defaultPadchar);
     
                 const mincol = needMincol ? this.mincol : "";
-                const colinc = needColinc ? charEscape(this.colinc) : "";
-                const minpad = needMinpad ? charEscape(this.minpad) : "";
-                const padchar = this.padchar;
+                const colinc = needColinc ? this.colinc : "";
+                const minpad = needMinpad ? this.minpad : "";
+                const padchar = charEscape(this.padchar);
     
                 let directive = `~${this.prefix}`;
                 if (needMincol && !needColinc && !needMinpad && !needPadchar) {
