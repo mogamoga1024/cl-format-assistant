@@ -1,6 +1,7 @@
 
 const CharOptions = {
     template: `
+        修飾子<br>
         <input type="radio" id="option0" value="" v-model="prefix" />
         <label for="option0">なし</label><br>
         <input type="radio" id="option1" value=":" v-model="prefix" />

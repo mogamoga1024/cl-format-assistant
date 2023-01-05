@@ -8,12 +8,22 @@ const DecimalOptions = {
         <label for="commachar">commachar:カンマに利用する文字</label>
         <input type="text" id="commachar" v-model="commachar"><br>
         <label for="comma-interval">comma-interval:カンマの間隔</label>
-        <input type="number" id="comma-interval" v-model="commaInterval">
+        <input type="number" id="comma-interval" v-model="commaInterval"><br>
+        修飾子<br>
+        <input type="radio" id="option0" value="" v-model="prefix" />
+        <label for="option0">なし</label><br>
+        <input type="radio" id="option1" value=":" v-model="prefix" />
+        <label for="option1">: カンマ区切りする</label><br>
+        <input type="radio" id="option2" value="@" v-model="prefix" />
+        <label for="option2">@ 正数のときに+の符号を出力する</label><br>
+        <input type="radio" id="option3" value=":@" v-model="prefix" />
+        <label for="option3">:@ カンマ区切りし、正数のときに+の符号を出力する</label>
     `,
     emits: ["createdDirective"],
     data() {
         return {
             directiveChar: "d",
+            prefix: "",
             mincol: 1,
             padchar: " ",
             commachar: ",",
@@ -25,6 +35,9 @@ const DecimalOptions = {
         }
     },
     watch: {
+        prefix() {
+            this.creatDirective();
+        },
         mincol() {
             this.creatDirective();
         },
@@ -53,18 +66,18 @@ const DecimalOptions = {
             const commachar = needCommachar ? charEscape(this.commachar) : "";
             const commaInterval = this.commaInterval;
 
-            let directive = "~";
+            let directive = `~${this.prefix}`;
             if (needMincol && !needPadchar && !needCommachar && !needCommaInterval) {
-                directive = `~${mincol}`;
+                directive += `${mincol}`;
             }
             else if (needPadchar && !needCommachar && !needCommaInterval) {
-                directive = `~${mincol},${padchar}`;
+                directive += `${mincol},${padchar}`;
             }
             else if (needCommachar && !needCommaInterval) {
-                directive = `~${mincol},${padchar},${commachar}`;
+                directive += `${mincol},${padchar},${commachar}`;
             }
             else if (needCommaInterval) {
-                directive = `~${mincol},${padchar},${commachar},${commaInterval}`;
+                directive += `${mincol},${padchar},${commachar},${commaInterval}`;
             }
             directive += this.directiveChar;
 
