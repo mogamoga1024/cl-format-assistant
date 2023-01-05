@@ -11,25 +11,25 @@
 <body>
   <div id="app">
     <div>
-      <button @click="onDirectiveButtonClick('tilda')">~:チルダ</button>
-      <button @click="onDirectiveButtonClick('char')">c:文字</button>
-      <button @click="onDirectiveButtonClick('new-line')">%:改行</button>
-      <button @click="onDirectiveButtonClick('fresh-line')">&:先頭以外改行</button>
+      <div class="button" @click="onDirectiveButtonClick('tilda')">~：チルダ</div>
+      <div class="button" @click="onDirectiveButtonClick('char')">c：文字</div>
+      <div class="button" @click="onDirectiveButtonClick('new-line')">%：改行</div>
+      <div class="button" @click="onDirectiveButtonClick('fresh-line')">&：先頭以外改行</div>
     </div>
     <div>
-      <button @click="onDirectiveButtonClick('decimal')">d:整数（10進数）</button>
-      <button @click="onDirectiveButtonClick('binary')">b:整数（2進数）</button>
-      <button @click="onDirectiveButtonClick('octal')">o:整数（8進数）</button>
-      <button @click="onDirectiveButtonClick('hexadecimal')">x:整数（16進数）</button>
+      <div class="button" @click="onDirectiveButtonClick('decimal')">d：整数（10進数）</div>
+      <div class="button" @click="onDirectiveButtonClick('binary')">b：整数（2進数）</div>
+      <div class="button" @click="onDirectiveButtonClick('octal')">o：整数（8進数）</div>
+      <div class="button" @click="onDirectiveButtonClick('hexadecimal')">x：整数（16進数）</div>
     </div>
     <div>
-      <button @click="onDirectiveButtonClick('fixed-float')">f:小数（固定小数点）</button>
-      <button @click="onDirectiveButtonClick('exponent-float')">e:小数（指数）</button>
-      <button @click="onDirectiveButtonClick('general-float')">g:小数（自動選択）</button>
+      <div class="button" @click="onDirectiveButtonClick('fixed-float')">f：小数（固定小数点）</div>
+      <div class="button" @click="onDirectiveButtonClick('exponent-float')">e：小数（指数）</div>
+      <div class="button" @click="onDirectiveButtonClick('general-float')">g：小数（自動選択）</div>
     </div>
     <div>
-      <button @click="onDirectiveButtonClick('aesthetic')">a:汎用（きれい）</button>
-      <button @click="onDirectiveButtonClick('standard')">s:汎用（標準）</button>
+      <div class="button" @click="onDirectiveButtonClick('aesthetic')">a：汎用（きれい）</div>
+      <div class="button" @click="onDirectiveButtonClick('standard')">s：汎用（標準）</div>
     </div>
     <component :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
     <div>
