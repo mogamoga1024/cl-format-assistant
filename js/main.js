@@ -1,26 +1,23 @@
 
 const App = {
     components: {
-        TildaOptions
+        TildaOptions,
+        CharOptions,
     },
     data() {
         return {
-            directive: "~5.2f",
-            currentDirectiveComponent: "tilda-options"
+            directive: "tilda-options",
+            currentDirectiveComponent: ""
         }
-    },
-    computed: {
-        
-    },
-    mounted() {
-        
     },
     methods: {
         onTildaButtonClick() {
-            //this.directive = "~~"
+            this.currentDirectiveComponent = "tilda-options";
+        },
+        onCharButtonClick() {
+            this.currentDirectiveComponent = "char-options";
         },
         changeDirective(newDirective) {
-            console.log(newDirective);
             this.directive = newDirective;
         }
     }

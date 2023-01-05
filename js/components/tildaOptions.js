@@ -16,6 +16,9 @@ const TildaOptions = {
             this.creatDirective();
         }
     },
+    mounted() {
+        this.creatDirective();
+    },
     methods: {
         creatDirective() {
             let directive = `~~`;
