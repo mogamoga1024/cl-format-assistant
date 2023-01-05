@@ -1,4 +1,8 @@
 
+body {
+  background-color: #ffffef;
+}
+
 #app {
   margin-top: 16px;
   margin-left: 24px;
@@ -30,10 +34,17 @@
 }
 
 #directive-summary {
+  display: inline-block;
   font-size: 20px;
 }
 
+#clear-button {
+  margin-left: 16px;
+  background-color: #dbffdb;
+}
+
 #result {
+  margin-top: 8px;
   font-size: 36px;
   max-width: 500px;
   text-align: center;

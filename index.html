@@ -34,10 +34,11 @@
     </div>
     <div id="result-container">
       <div id="directive-summary">{{directiveSummary}}</div>
+      <div id="clear-button" class="button">初期化</div>
       <div id="result">{{directive}}</div>
     </div>
     <div id="directive-options">
-      <component :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
+      <component ref="directiveComponent" :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
     </div>
   </div>
   <script src="js/utils.js"></script>
