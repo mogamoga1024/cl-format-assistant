@@ -38,17 +38,20 @@
 
 .label-small {
   display: inline-block;
-  width: 30px;
+  min-width: 30px;
+  font-weight: bold;
 }
 
 .label {
   display: inline-block;
-  width: 120px;
+  min-width: 132px;
+  font-weight: bold;
 }
 
 .label-large {
   display: inline-block;
-  width: 140px;
+  min-width: 152px;
+  font-weight: bold;
 }
 
 input[type="number"], input[type="text"] {
@@ -71,6 +74,7 @@ input[type="number"], input[type="text"] {
 
 .radio-label {
   min-width: 56px;
+  font-weight: bold;
 }
 
 .radio {
