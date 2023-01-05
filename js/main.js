@@ -1,7 +1,7 @@
 
 const App = {
     components: {
-        "tilda-options": TildaOptions
+        TildaOptions
     },
     data() {
         return {
