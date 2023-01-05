@@ -39,9 +39,16 @@ body {
   font-size: 20px;
 }
 
+.other-directive-container {
+  display: flex;
+}
+
 .other-directive-summary {
-  display: inline-block;
   min-width: 240px;
+}
+
+.other-directive-container a {
+  display: block;
 }
 
 #directive-summary {
