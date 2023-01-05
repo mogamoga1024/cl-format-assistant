@@ -55,5 +55,10 @@ input[type="number"], input[type="text"] {
 
 .radio-container {
   display: flex;
+  margin-top: 16px;
 }
 
+.prefix {
+  display: inline-block;
+  width: 34px;
+}

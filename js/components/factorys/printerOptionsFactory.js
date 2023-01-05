@@ -16,11 +16,11 @@ const createPrinterOptions = function(_directiveChar, referenceTitle, referenceU
                 <input type="radio" id="option0" value="" v-model="prefix" />
                 <label for="option0">なし</label><br>
                 <input type="radio" id="option1" value=":" v-model="prefix" />
-                <label for="option1">: nilを()と出力する</label><br>
+                <label for="option1"><div class="prefix">:</div>nilを()と出力する</label><br>
                 <input type="radio" id="option2" value="@" v-model="prefix" />
-                <label for="option2">@ 右寄せで出力する</label><br>
+                <label for="option2"><div class="prefix">@</div>右寄せで出力する</label><br>
                 <input type="radio" id="option3" value=":@" v-model="prefix" />
-                <label for="option3">:@ 右寄せで出力し、かつnilは()と出力する</label>
+                <label for="option3"><div class="prefix">:@</div>右寄せで出力し、かつnilは()と出力する</label>
               </div>
             </div>
             参考サイト: <a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
