@@ -3,7 +3,7 @@ const createFloatOptions = function(_directiveChar, referenceTitle, referenceUrl
     return {
         template: `
             <label class="label" for="w">w</label>
-            <input type="number" id="w" v-model="w"文字数><br>
+            <input type="number" id="w" v-model="w">文字数<br>
             <label class="label" for="d">d</label>
             <input type="number" id="d" v-model="d">仮数の小数点以下の桁数<br>
             <label class="label" for="e">e</label>
