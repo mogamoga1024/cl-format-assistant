@@ -13,6 +13,7 @@ const DecimalOptions = {
     emits: ["createdDirective"],
     data() {
         return {
+            directiveChar: "d",
             mincol: 1,
             padchar: " ",
             commachar: ",",
@@ -52,19 +53,20 @@ const DecimalOptions = {
             const commachar = needCommachar ? charEscape(this.commachar) : "";
             const commaInterval = this.commaInterval;
 
-            let directive = `~d`;
+            let directive = "~";
             if (needMincol && !needPadchar && !needCommachar && !needCommaInterval) {
-                directive = `~${mincol}d`;
+                directive = `~${mincol}`;
             }
             else if (needPadchar && !needCommachar && !needCommaInterval) {
-                directive = `~${mincol},${padchar}d`;
+                directive = `~${mincol},${padchar}`;
             }
             else if (needCommachar && !needCommaInterval) {
-                directive = `~${mincol},${padchar},${commachar}d`;
+                directive = `~${mincol},${padchar},${commachar}`;
             }
             else if (needCommaInterval) {
-                directive = `~${mincol},${padchar},${commachar},${commaInterval}d`;
+                directive = `~${mincol},${padchar},${commachar},${commaInterval}`;
             }
+            directive += this.directiveChar;
 
             this.$emit("createdDirective", directive);
         }

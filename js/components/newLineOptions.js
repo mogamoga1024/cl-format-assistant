@@ -7,6 +7,7 @@ const NewLineOptions = {
     emits: ["createdDirective"],
     data() {
         return {
+            directiveChar: "%",
             n: 1,
             defaultN: 1
         }
@@ -21,10 +22,11 @@ const NewLineOptions = {
     },
     methods: {
         creatDirective() {
-            let directive = `~%`;
+            let directive = "~";
             if (this.n !== this.defaultN) {
-                directive = `~${this.n}%`;
+                directive = `~${this.n}`;
             }
+            directive += this.directiveChar;
             this.$emit("createdDirective", directive);
         }
     }
