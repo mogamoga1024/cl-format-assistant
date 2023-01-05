@@ -58,6 +58,10 @@ input[type="number"], input[type="text"] {
   margin-top: 16px;
 }
 
+.radio {
+  margin-left: 8px;
+}
+
 .prefix {
   display: inline-block;
   width: 34px;
