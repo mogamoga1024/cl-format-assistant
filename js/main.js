@@ -4,7 +4,7 @@ const App = {
         TildaOptions, CharOptions, NewLineOptions, FreshLineOptions,
         DecimalOptions, BinaryOptions, OctalOptions, HexadecimalOptions,
         FixedFloatOptions, ExponentFloatOptions, GeneralFloatOptions,
-        AestheticOptions, StandardOptions
+        AestheticOptions, StandardOptions, Other
     },
     data() {
         return {
