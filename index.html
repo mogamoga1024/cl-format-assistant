@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cl-format-assistant</title>
+  <title>cl-format-simple-assistant</title>
   <script src="https://unpkg.com/vue@next"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
@@ -12,30 +12,33 @@
 <body>
   <div id="app">
     <div>
-      <button @click="onDirectiveButtonClick('tilda')">~:チルダ</button>
-      <button @click="onDirectiveButtonClick('char')">c:文字</button>
-      <button @click="onDirectiveButtonClick('new-line')">%:改行</button>
-      <button @click="onDirectiveButtonClick('fresh-line')">&:先頭以外改行</button>
+      <template v-for="name in ['tilda', 'char', 'new-line', 'fresh-line']">
+        <div class="button" @click="onDirectiveButtonClick(name)">{{directiveSummaryList[name]}}</div>
+      </template>
     </div>
     <div>
-      <button @click="onDirectiveButtonClick('decimal')">d:整数（10進数）</button>
-      <button @click="onDirectiveButtonClick('binary')">b:整数（2進数）</button>
-      <button @click="onDirectiveButtonClick('octal')">o:整数（8進数）</button>
-      <button @click="onDirectiveButtonClick('hexadecimal')">x:整数（16進数）</button>
+      <template v-for="name in ['decimal', 'binary', 'octal', 'hexadecimal']">
+        <div class="button" @click="onDirectiveButtonClick(name)">{{directiveSummaryList[name]}}</div>
+      </template>
     </div>
     <div>
-      <button @click="onDirectiveButtonClick('fixed-float')">f:小数（固定小数点）</button>
-      <button @click="onDirectiveButtonClick('exponent-float')">e:小数（指数）</button>
-      <button @click="onDirectiveButtonClick('general-float')">g:小数（自動選択）</button>
+      <template v-for="name in ['fixed-float', 'exponent-float', 'general-float']">
+        <div class="button" @click="onDirectiveButtonClick(name)">{{directiveSummaryList[name]}}</div>
+      </template>
     </div>
     <div>
-      <button @click="onDirectiveButtonClick('aesthetic')">a:汎用（きれい）</button>
-      <button @click="onDirectiveButtonClick('standard')">s:汎用（標準）</button>
+      <template v-for="name in ['aesthetic', 'standard']">
+        <div class="button" @click="onDirectiveButtonClick(name)">{{directiveSummaryList[name]}}</div>
+      </template>
+      <div class="button">その他</div>
     </div>
-    <component :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
-    <div>
-      <div>結果</div>
-      <div>{{directive}}</div>
+    <div id="result-container">
+      <div id="directive-summary">{{directiveSummary}}</div>
+      <div id="clear-button" class="button" @click="onClearButtonClick">初期化</div>
+      <div id="result">{{directive}}</div>
+    </div>
+    <div id="directive-options">
+      <component ref="directiveComponent" :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
     </div>
   </div>
   

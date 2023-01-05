@@ -1,0 +1,115 @@
+
+body {
+  background-color: #ffffef;
+}
+
+#app {
+  margin-top: 16px;
+  margin-left: 24px;
+  font-family: 'Hiragino Kaku Gothic ProN’, 'ヒラギノ角ゴ ProN W3’, 'Meiryo UI’, Meiryo, メイリオ, Osaka, 'MS PGothic’, arial, helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #d6eaff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+#directive-options {
+  margin-top: 16px;
+}
+
+#result-container {
+  margin-top: 16px;
+}
+
+#directive-summary {
+  display: inline-block;
+  font-size: 20px;
+}
+
+#clear-button {
+  margin-left: 16px;
+  background-color: #dbffdb;
+}
+
+#result {
+  margin-top: 8px;
+  font-size: 36px;
+  max-width: 500px;
+  text-align: center;
+  background-color: #ffd8b2;
+}
+
+label {
+  display: inline-block;
+}
+
+.label-small {
+  min-width: 30px;
+  font-weight: bold;
+}
+
+.label {
+  min-width: 132px;
+  font-weight: bold;
+}
+
+.label-large {
+  min-width: 152px;
+  font-weight: bold;
+}
+
+input[type="number"], input[type="text"] {
+  width: 50px;
+  margin-left: 8px;
+  margin-right: 10px;
+  font-size: 18px;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+}
+
+.description {
+  display: inline-block;
+}
+
+.radio-container {
+  display: flex;
+  margin-top: 16px;
+}
+
+.radio-label {
+  min-width: 56px;
+  font-weight: bold;
+}
+
+.radio {
+  margin-left: 8px;
+}
+
+.radio-option {
+  display: flex;  
+}
+
+input[type="radio"] {
+  display: inline-block;
+}
+
+.prefix {
+  display: inline-block;
+  width: 34px;
+}
+
+.link {
+  margin-top: 16px;
+}

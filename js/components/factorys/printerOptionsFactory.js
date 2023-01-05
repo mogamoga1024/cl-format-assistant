@@ -2,24 +2,38 @@
 const createPrinterOptions = function(_directiveChar, referenceTitle, referenceUrl) {
     return  {
         template: `
-            <label for="mincol">mincol:最小文字数</label>
-            <input type="number" id="mincol" v-model="mincol"><br>
-            <label for="colinc">colinc:1回のパディングでpadcharを利用する回数</label>
-            <input type="number" id="colinc" v-model="colinc"><br>
-            <label for="minpad">minpad:パディングの最小回数</label>
-            <input type="number" id="minpad" v-model="minpad"><br>
-            <label for="padchar">padchar:パディングに利用する文字</label>
-            <input type="text" id="padchar" v-model="padchar"><br>
-            修飾子<br>
-            <input type="radio" id="option0" value="" v-model="prefix" />
-            <label for="option0">なし</label><br>
-            <input type="radio" id="option1" value=":" v-model="prefix" />
-            <label for="option1">: nilを()と出力する</label><br>
-            <input type="radio" id="option2" value="@" v-model="prefix" />
-            <label for="option2">@ 右寄せで出力する</label><br>
-            <input type="radio" id="option3" value=":@" v-model="prefix" />
-            <label for="option3">:@ 右寄せで出力し、かつnilは()と出力する</label><br>
-            参考サイト: <a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
+            <label class="label" for="mincol">mincol</label>
+            <input type="number" id="mincol" v-model="mincol" min="0"><div class="description">最小文字数</div><br>
+            <label class="label" for="colinc">colinc</label>
+            <input type="number" id="colinc" v-model="colinc" min="1"><div class="description">1回のパディングでpadcharを利用する回数</div><br>
+            <label class="label" for="minpad">minpad</label>
+            <input type="number" id="minpad" v-model="minpad" min="0"><div class="description">パディングの最小回数</div><br>
+            <label class="label" for="padchar">padchar</label>
+            <input type="text" id="padchar" v-model="padchar" maxlength="1"><div class="description">パディングに利用する文字</div><br>
+            <div class="radio-container">
+              <div class="radio-label">修飾子</div>
+              <div class="radio">
+                <div class="radio-option">
+                  <input type="radio" id="option0" value="" v-model="prefix" />
+                  <label for="option0">なし</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="option1" value=":" v-model="prefix" />
+                  <label for="option1"><div class="prefix">:</div>nilを()と出力する</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="option2" value="@" v-model="prefix" />
+                  <label for="option2"><div class="prefix">@</div>右寄せで出力する</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="option3" value=":@" v-model="prefix" />
+                  <label for="option3"><div class="prefix">:@</div>右寄せで出力し、かつnilは()と出力する</label>
+                </div>
+              </div>
+            </div>
+            <div class="link">
+              参考サイト：<a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
+            </div>
         `,
         emits: ["createdDirective"],
         data() {
@@ -57,6 +71,13 @@ const createPrinterOptions = function(_directiveChar, referenceTitle, referenceU
             this.creatDirective();
         },
         methods: {
+            clear() {
+                this.prefix = "";
+                this.mincol = this.defaultMincol;
+                this.colinc = this.defaultColinc;
+                this.minpad = this.defaultMinpad;
+                this.padchar = this.defaultPadchar;
+            },
             creatDirective() {
                 const needMincol = needParam(this.mincol, this.defaultMincol);
                 const needColinc = needParam(this.colinc, this.defaultColinc);
