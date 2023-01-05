@@ -23,9 +23,9 @@
       <button @click="onDirectiveButtonClick('hexadecimal')">x:整数（16進数）</button>
     </div>
     <div>
-      <button>f:小数（固定小数点）</button>
-      <button>e:小数（指数）</button>
-      <button>g:小数（自動選択）</button>
+      <button @click="onDirectiveButtonClick('fixed-float')">f:小数（固定小数点）</button>
+      <button @click="onDirectiveButtonClick('exponent-float')">e:小数（指数）</button>
+      <button @click="onDirectiveButtonClick('general-float')">g:小数（自動選択）</button>
     </div>
     <div>
       <button>a:汎用（きれい）</button>
@@ -43,6 +43,7 @@
   <script src="js/components/basicOptions.js"></script>
   <script src="js/components/charOptions.js"></script>
   <script src="js/components/radixOptions.js"></script>
+  <script src="js/components/fixedFloatOptions.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

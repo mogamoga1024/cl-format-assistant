@@ -9,6 +9,7 @@ const App = {
         BinaryOptions,
         OctalOptions,
         HexadecimalOptions,
+        FixedFloatOptions,
     },
     data() {
         return {
