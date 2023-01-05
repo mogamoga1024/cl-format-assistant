@@ -36,20 +36,21 @@
   background-color: #ffd8b2;
 }
 
-.label-small {
+label {
   display: inline-block;
+}
+
+.label-small {
   min-width: 30px;
   font-weight: bold;
 }
 
 .label {
-  display: inline-block;
   min-width: 132px;
   font-weight: bold;
 }
 
 .label-large {
-  display: inline-block;
   min-width: 152px;
   font-weight: bold;
 }
@@ -79,6 +80,14 @@ input[type="number"], input[type="text"] {
 
 .radio {
   margin-left: 8px;
+}
+
+.radio-option {
+  display: flex;  
+}
+
+input[type="radio"] {
+  display: inline-block;
 }
 
 .prefix {
