@@ -3,19 +3,19 @@ const createFloatOptions = function(_directiveChar, referenceTitle, referenceUrl
     return {
         template: `
             <label class="label" for="w">w</label>
-            <input type="number" id="w" v-model="w" min="1">文字数<br>
+            <input type="number" id="w" v-model="w" min="1"><div class="description">文字数</div><br>
             <label class="label" for="d">d</label>
-            <input type="number" id="d" v-model="d" min="0">仮数の小数点以下の桁数<br>
+            <input type="number" id="d" v-model="d" min="0"><div class="description">仮数の小数点以下の桁数</div><br>
             <label class="label" for="e">e</label>
-            <input type="number" id="e" v-model="e" min="0">指数部の桁数<br>
+            <input type="number" id="e" v-model="e" min="0"><div class="description">指数部の桁数</div><br>
             <label class="label" for="k">k</label>
-            <input type="number" id="k" v-model="k" min="1">仮数の整数部の桁数<br>
+            <input type="number" id="k" v-model="k" min="1"><div class="description">仮数の整数部の桁数</div><br>
             <label class="label" for="overflowchar">overflowchar</label>
-            <input type="text" id="overflowchar" v-model="overflowchar" maxlength="1">wの文字数を超えたときに出力する文字<br>
+            <input type="text" id="overflowchar" v-model="overflowchar" maxlength="1"><div class="description">wの文字数を超えたときに出力する文字</div><br>
             <label class="label" for="padchar">padchar</label>
-            <input type="text" id="padchar" v-model="padchar" maxlength="1">パディングに利用する文字<br>
+            <input type="text" id="padchar" v-model="padchar" maxlength="1"><div class="description">パディングに利用する文字</div><br>
             <label class="label" for="exponentchar">exponentchar</label>
-            <input type="text" id="exponentchar" v-model="exponentchar" maxlength="1">仮数部と指数部の間の文字<br>
+            <input type="text" id="exponentchar" v-model="exponentchar" maxlength="1"><div class="description">仮数部と指数部の間の文字</div><br>
             <div class="radio-container">
               <div>修飾子</div>
               <div class="radio">

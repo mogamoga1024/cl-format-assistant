@@ -3,13 +3,13 @@ const createRadixOptions = function(_directiveChar, referenceTitle, referenceUrl
     return  {
         template: `
             <label class="label-large" for="mincol">mincol</label>
-            <input type="number" id="mincol" v-model="mincol" min="1">最小文字数<br>
+            <input type="number" id="mincol" v-model="mincol" min="1"><div class="description">最小文字数</div><br>
             <label class="label-large" for="padchar">padchar</label>
-            <input type="text" id="padchar" v-model="padchar" maxlength="1">パディングに利用する文字<br>
+            <input type="text" id="padchar" v-model="padchar" maxlength="1"><div class="description">パディングに利用する文字</div><br>
             <label class="label-large" for="commachar">commachar</label>
-            <input type="text" id="commachar" v-model="commachar" maxlength="1">カンマに利用する文字<br>
+            <input type="text" id="commachar" v-model="commachar" maxlength="1"><div class="description">カンマに利用する文字</div><br>
             <label class="label-large" for="comma-interval">comma-interval</label>
-            <input type="number" id="comma-interval" v-model="commaInterval" min="1">カンマの間隔<br>
+            <input type="number" id="comma-interval" v-model="commaInterval" min="1"><div class="description">カンマの間隔</div><br>
             <div class="radio-container">
               <div>修飾子</div>
               <div class="radio">

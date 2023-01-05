@@ -60,6 +60,10 @@ input[type="number"], input[type="text"] {
   border-radius: 4px;
 }
 
+.description {
+  display: inline-block;
+}
+
 .radio-container {
   display: flex;
   margin-top: 16px;
