@@ -12,6 +12,8 @@ const App = {
         FixedFloatOptions,
         ExponentFloatOptions,
         GeneralFloatOptions,
+        AestheticOptions,
+        StandardOptions
     },
     data() {
         return {
