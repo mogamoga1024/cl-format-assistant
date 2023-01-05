@@ -11,10 +11,10 @@
 <body>
   <div id="app">
     <div>
-      <button @click="onTildaButtonClick">~:チルダ</button>
-      <button @click="onCharButtonClick">c:文字</button>
-      <button>%:改行</button>
-      <button>&:先頭以外改行</button>
+      <button @click="onDirectiveButtonClick('tilda')">~:チルダ</button>
+      <button @click="onDirectiveButtonClick('char')">c:文字</button>
+      <button @click="onDirectiveButtonClick('new-line')">%:改行</button>
+      <button @click="onDirectiveButtonClick('fresh-line')">&:先頭以外改行</button>
     </div>
     <div>
       <button>d:整数（10進数）</button>
@@ -31,9 +31,7 @@
       <button>a:汎用（きれい）</button>
       <button>s:汎用（標準）</button>
     </div>
-    <keep-alive>
-      <component :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
-    </keep-alive>
+    <component :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
     <div>
       <div>結果</div>
       <div>{{directive}}</div>
@@ -41,6 +39,8 @@
   </div>
   <script src="js/components/tildaOptions.js"></script>
   <script src="js/components/charOptions.js"></script>
+  <script src="js/components/newLineOptions.js"></script>
+  <script src="js/components/freshLineOptions.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

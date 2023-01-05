@@ -3,19 +3,18 @@ const App = {
     components: {
         TildaOptions,
         CharOptions,
+        NewLineOptions,
+        FreshLineOptions,
     },
     data() {
         return {
-            directive: "tilda-options",
-            currentDirectiveComponent: ""
+            directive: "",
+            currentDirectiveComponent: "tilda-options"
         }
     },
     methods: {
-        onTildaButtonClick() {
-            this.currentDirectiveComponent = "tilda-options";
-        },
-        onCharButtonClick() {
-            this.currentDirectiveComponent = "char-options";
+        onDirectiveButtonClick(directiveName) {
+            this.currentDirectiveComponent = `${directiveName}-options`;
         },
         changeDirective(newDirective) {
             this.directive = newDirective;
