@@ -2,20 +2,20 @@
 const createFloatOptions = function(_directiveChar, referenceTitle, referenceUrl) {
     return {
         template: `
-            <label for="w">w:文字数</label>
-            <input type="number" id="w" v-model="w"><br>
-            <label for="d">d:仮数の小数点以下の桁数</label>
-            <input type="number" id="d" v-model="d"><br>
-            <label for="e">e:指数部の桁数</label>
-            <input type="number" id="e" v-model="e"><br>
-            <label for="k">k:仮数の整数部の桁数</label>
-            <input type="number" id="k" v-model="k"><br>
-            <label for="overflowchar">overflowchar:wの文字数を超えたときに出力する文字</label>
-            <input type="text" id="overflowchar" v-model="overflowchar"><br>
-            <label for="padchar">padchar:パディングに利用する文字</label>
-            <input type="text" id="padchar" v-model="padchar"><br>
-            <label for="exponentchar">exponentchar:仮数部と指数部の間の文字</label>
-            <input type="text" id="exponentchar" v-model="exponentchar"><br>
+            <label class="label" for="w">w</label>
+            <input type="number" id="w" v-model="w"文字数><br>
+            <label class="label" for="d">d</label>
+            <input type="number" id="d" v-model="d">仮数の小数点以下の桁数<br>
+            <label class="label" for="e">e</label>
+            <input type="number" id="e" v-model="e">指数部の桁数<br>
+            <label class="label" for="k">k</label>
+            <input type="number" id="k" v-model="k">仮数の整数部の桁数<br>
+            <label class="label" for="overflowchar">overflowchar</label>
+            <input type="text" id="overflowchar" v-model="overflowchar">wの文字数を超えたときに出力する文字<br>
+            <label class="label" for="padchar">padchar</label>
+            <input type="text" id="padchar" v-model="padchar">パディングに利用する文字<br>
+            <label class="label" for="exponentchar">exponentchar</label>
+            <input type="text" id="exponentchar" v-model="exponentchar">仮数部と指数部の間の文字<br>
             修飾子<br>
             <input type="radio" id="option0" value="" v-model="prefix" />
             <label for="option0">なし</label><br>
