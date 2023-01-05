@@ -5,7 +5,7 @@ const App = {
     },
     data() {
         return {
-            result: "~5.2f"
+            directive: "~5.2f"
         }
     },
     computed: {
@@ -16,7 +16,7 @@ const App = {
     },
     methods: {
         onTildaButtonClick() {
-            //this.result = "~~"
+            //this.directive = "~~"
         }
     }
 };

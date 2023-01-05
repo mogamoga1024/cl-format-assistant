@@ -6,12 +6,18 @@ const TildaOptions = {
     `,
     data() {
         return {
-            n: 1
+            n: 1,
+            defaultN: 1
         }
     },
     watch: {
-        n(newValue, oldValue) {
-            console.log(newValue, oldValue);
+        n(value) {
+            
+        }
+    },
+    methods: {
+        createdDirective() {
+            
         }
     }
 };
