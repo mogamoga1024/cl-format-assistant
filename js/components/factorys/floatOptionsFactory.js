@@ -19,10 +19,14 @@ const createFloatOptions = function(_directiveChar, referenceTitle, referenceUrl
             <div class="radio-container">
               <div class="radio-label">修飾子</div>
               <div class="radio">
-                <input type="radio" id="option0" value="" v-model="prefix" />
-                <label for="option0">なし</label><br>
-                <input type="radio" id="option1" value="@" v-model="prefix" />
-                <label for="option1">@ 正数のときに+の符号を出力する</label>
+                <div class="radio-option">
+                  <input type="radio" id="option0" value="" v-model="prefix" />
+                  <label for="option0">なし</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="option1" value="@" v-model="prefix" />
+                  <label for="option1">@ 正数のときに+の符号を出力する</label>
+                </div>
               </div>
             </div>
             <div class="link">

@@ -13,14 +13,22 @@ const createRadixOptions = function(_directiveChar, referenceTitle, referenceUrl
             <div class="radio-container">
               <div class="radio-label">修飾子</div>
               <div class="radio">
-                <input type="radio" id="option0" value="" v-model="prefix" />
-                <label for="option0">なし</label><br>
-                <input type="radio" id="option1" value=":" v-model="prefix" />
-                <label for="option1"><div class="prefix">:</div>カンマ区切りする</label><br>
-                <input type="radio" id="option2" value="@" v-model="prefix" />
-                <label for="option2"><div class="prefix">@</div>正数のときに+の符号を出力する</label><br>
-                <input type="radio" id="option3" value=":@" v-model="prefix" />
-                <label for="option3"><div class="prefix">:@</div>カンマ区切りし、正数のときに+の符号を出力する</label>
+                <div class="radio-option">
+                  <input type="radio" id="option0" value="" v-model="prefix" />
+                  <label for="option0">なし</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="option1" value=":" v-model="prefix" />
+                  <label for="option1"><div class="prefix">:</div>カンマ区切りする</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="option2" value="@" v-model="prefix" />
+                  <label for="option2"><div class="prefix">@</div>正数のときに+の符号を出力する</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="option3" value=":@" v-model="prefix" />
+                  <label for="option3"><div class="prefix">:@</div>カンマ区切りし、正数のときに+の符号を出力する</label>
+                </div>
               </div>
             </div>
             <div class="link">
