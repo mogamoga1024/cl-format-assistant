@@ -1,7 +1,7 @@
 
-const viewModel = {
+const App = {
     components: {
-        TildaOptions
+        "tilda-options": TildaOptions
     },
     data() {
         return {
@@ -21,4 +21,4 @@ const viewModel = {
     }
 };
 
-Vue.createApp(viewModel).mount("#app");
+const app = Vue.createApp(App).mount("#app");
