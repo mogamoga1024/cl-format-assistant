@@ -59,11 +59,11 @@ const FixedFloatOptions = {
     },
     methods: {
         creatDirective() {
-            const needW = this.w !== this.defaultW;
-            const needD = this.d !== this.defaultD;
-            const needK = this.k !== this.defaultK;
-            const needOverflowchar = this.overflowchar !== this.defaultOverflowchar && this.overflowchar !== "";
-            const needPadchar = this.padchar !== this.defaultPadchar && this.padchar !== "";
+            const needW = needParam(this.w, this.defaultW);
+            const needD = needParam(this.d, this.defaultD);
+            const needK = needParam(this.k, this.defaultK);
+            const needOverflowchar = needParam(this.overflowchar, this.defaultOverflowchar);
+            const needPadchar = needParam(this.padchar, this.defaultPadchar);
 
             const w = needW ? this.w : "";
             const d = needD ? this.d : "";
