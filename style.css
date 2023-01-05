@@ -31,7 +31,7 @@
 
 #result {
   font-size: 36px;
-  width: 500px;
+  max-width: 500px;
   text-align: center;
   background-color: #ffd8b2;
 }
