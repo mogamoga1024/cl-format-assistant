@@ -7,7 +7,7 @@ const FixedFloatOptions = {
         <input type="number" id="d" v-model="d"><br>
         <label for="k">k:引数を10^k倍にする</label>
         <input type="number" id="k" v-model="k"><br>
-        <label for="overflowchar">overflowchar:wの文字数に収まらなかったときに出力する文字</label>
+        <label for="overflowchar">overflowchar:wの文字数を超えたときに出力する文字</label>
         <input type="text" id="overflowchar" v-model="overflowchar"><br>
         <label for="padchar">padchar:パディングに利用する文字</label>
         <input type="text" id="padchar" v-model="padchar"><br>
@@ -15,7 +15,7 @@ const FixedFloatOptions = {
         <input type="radio" id="option0" value="" v-model="prefix" />
         <label for="option0">なし</label><br>
         <input type="radio" id="option1" value="@" v-model="prefix" />
-        <label for="option1">@ @ 正数のときに+の符号を出力する</label><br>
+        <label for="option1">@ 正数のときに+の符号を出力する</label><br>
     `,
     emits: ["createdDirective"],
     data() {
