@@ -10,6 +10,7 @@ const App = {
         OctalOptions,
         HexadecimalOptions,
         FixedFloatOptions,
+        ExponentFloatOptions,
     },
     data() {
         return {
