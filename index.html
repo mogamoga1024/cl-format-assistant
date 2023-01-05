@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cl-format-assistant</title>
-    <script src="https://unpkg.com/vue@next"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cl-format-assistant</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <div id="app">
+    <div>
+      <button>~:チルダ</button>
+      <button>c:文字</button>
+      <button>%:改行</button>
+      <button>&:先頭以外改行</button>
+    </div>
+    <div>
+      <button>d:整数（10進数）</button>
+      <button>b:整数（2進数）</button>
+      <button>o:整数（8進数）</button>
+      <button>x:整数（16進数）</button>
+    </div>
+    <div>
+      <button>f:小数（固定小数点）</button>
+      <button>e:小数（指数）</button>
+      <button>g:小数（自動選択）</button>
+    </div>
+    <div>
+      <button>a:汎用（きれい）</button>
+      <button>s:汎用（標準）</button>
+    </div>
+    <div>
+      結果<br>
+      ~5,2f
+    </div>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
