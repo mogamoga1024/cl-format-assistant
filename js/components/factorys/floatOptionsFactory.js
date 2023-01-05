@@ -84,6 +84,16 @@ const createFloatOptions = function(_directiveChar, referenceTitle, referenceUrl
             this.creatDirective();
         },
         methods: {
+            clear() {
+                this.prefix = "";
+                this.w = this.defaultW;
+                this.d = this.defaultD;
+                this.e = this.defaultE;
+                this.k = this.defaultK;
+                this.overflowchar = this.defaultOverflowchar;
+                this.padchar = this.defaultPadchar;
+                this.exponentchar = this.defaultExponentchar;
+            },
             creatDirective() {
                 const needW = needParam(this.w, this.defaultW);
                 const needD = needParam(this.d, this.defaultD);

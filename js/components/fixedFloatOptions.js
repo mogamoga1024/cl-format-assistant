@@ -69,6 +69,14 @@ const FixedFloatOptions = {
         this.creatDirective();
     },
     methods: {
+        clear() {
+            this.prefix = "";
+            this.w = this.defaultW;
+            this.d = this.defaultD;
+            this.k = this.defaultK;
+            this.overflowchar = this.defaultOverflowchar;
+            this.padchar = this.defaultPadchar;
+        },
         creatDirective() {
             const needW = needParam(this.w, this.defaultW);
             const needD = needParam(this.d, this.defaultD);

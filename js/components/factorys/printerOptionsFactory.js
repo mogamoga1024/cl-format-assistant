@@ -71,6 +71,13 @@ const createPrinterOptions = function(_directiveChar, referenceTitle, referenceU
             this.creatDirective();
         },
         methods: {
+            clear() {
+                this.prefix = "";
+                this.mincol = this.defaultMincol;
+                this.colinc = this.defaultColinc;
+                this.minpad = this.defaultMinpad;
+                this.padchar = this.defaultPadchar;
+            },
             creatDirective() {
                 const needMincol = needParam(this.mincol, this.defaultMincol);
                 const needColinc = needParam(this.colinc, this.defaultColinc);

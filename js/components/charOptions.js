@@ -42,6 +42,9 @@ const CharOptions = {
         this.creatDirective();
     },
     methods: {
+        clear() {
+          this.prefix = "";
+        },
         creatDirective() {
             this.$emit("createdDirective", `~${this.prefix}${this.directiveChar}`);
         }

@@ -25,6 +25,10 @@ const createBasicOptions = function(_directiveChar, referenceTitle, referenceUrl
             this.creatDirective();
         },
         methods: {
+            clear() {
+                this.prefix = "";
+                this.n = this.defaultN;
+            },
             creatDirective() {
                 let directive = "~";
                 if (this.n !== this.defaultN) {

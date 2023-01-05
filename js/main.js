@@ -36,6 +36,9 @@ const App = {
             this.directiveSummary = this.directiveSummaryList[directiveName];
             this.currentDirectiveComponent = `${directiveName}-options`;
         },
+        onClearButtonClick() {
+            this.$refs.directiveComponent.clear();
+        },
         changeDirective(newDirective) {
             this.directive = newDirective;
         }
