@@ -59,28 +59,33 @@ const FixedFloatOptions = {
     },
     methods: {
         creatDirective() {
-            const needMincol = this.mincol !== this.defaultMincol;
+            const needW = this.w !== this.defaultW;
+            const needD = this.d !== this.defaultD;
+            const needK = this.k !== this.defaultK;
+            const needOverflowchar = this.overflowchar !== this.defaultOverflowchar;
             const needPadchar = this.padchar !== this.defaultPadchar;
-            const needCommachar = this.commachar !== this.defaultCommachar;
-            const needCommaInterval = this.commaInterval !== this.defaultCommaInterval;
 
-            const mincol = needMincol ? this.mincol : "";
-            const padchar = needPadchar ? charEscape(this.padchar) : "";
-            const commachar = needCommachar ? charEscape(this.commachar) : "";
-            const commaInterval = this.commaInterval;
+            const w = needW ? this.w : "";
+            const d = needD ? this.d : "";
+            const k = needK ? this.k : "";
+            const overflowchar = needOverflowchar ? charEscape(this.overflowchar) : "";
+            const padchar = charEscape(this.padchar);
 
             let directive = `~${this.prefix}`;
-            if (needMincol && !needPadchar && !needCommachar && !needCommaInterval) {
-                directive += `${mincol}`;
+            if (needW && !needD && !needK && !needOverflowchar && !needPadchar) {
+                directive += `${w}`;
             }
-            else if (needPadchar && !needCommachar && !needCommaInterval) {
-                directive += `${mincol},${padchar}`;
+            else if (needD && !needK && !needOverflowchar && !needPadchar) {
+                directive += `${w},${d}`;
             }
-            else if (needCommachar && !needCommaInterval) {
-                directive += `${mincol},${padchar},${commachar}`;
+            else if (needK && !needOverflowchar && !needPadchar) {
+                directive += `${w},${d},${k}`;
             }
-            else if (needCommaInterval) {
-                directive += `${mincol},${padchar},${commachar},${commaInterval}`;
+            else if (needOverflowchar && !needPadchar) {
+                directive += `${w},${d},${k},${overflowchar}`;
+            }
+            else if (needPadchar) {
+                directive += `${w},${d},${k},${overflowchar},${padchar}`;
             }
             directive += this.directiveChar;
 
