@@ -1,14 +1,16 @@
 
 const FixedFloatOptions = {
     template: `
-        <label for="mincol">mincol:最小文字数</label>
-        <input type="number" id="mincol" v-model="mincol"><br>
+        <label for="w">w:文字数</label>
+        <input type="number" id="w" v-model="w"><br>
+        <label for="d">d:小数点以下の桁数</label>
+        <input type="number" id="d" v-model="d"><br>
+        <label for="k">k:引数を10^k倍にする</label>
+        <input type="number" id="k" v-model="k"><br>
+        <label for="overflowchar">overflowchar:wの文字数に収まらなかったときに出力する文字</label>
+        <input type="text" id="overflowchar" v-model="overflowchar"><br>
         <label for="padchar">padchar:パディングに利用する文字</label>
         <input type="text" id="padchar" v-model="padchar"><br>
-        <label for="commachar">commachar:カンマに利用する文字</label>
-        <input type="text" id="commachar" v-model="commachar"><br>
-        <label for="comma-interval">comma-interval:カンマの間隔</label>
-        <input type="number" id="comma-interval" v-model="commaInterval"><br>
         修飾子<br>
         <input type="radio" id="option0" value="" v-model="prefix" />
         <label for="option0">なし</label><br>
@@ -20,30 +22,35 @@ const FixedFloatOptions = {
         return {
             directiveChar: "f",
             prefix: "",
-            mincol: 1,
+            w: "",
+            d: "",
+            k: 0,
+            overflowchar: "",
             padchar: " ",
-            commachar: ",",
-            commaInterval: 3,
-            defaultMincol: 1,
-            defaultPadchar: " ",
-            defaultCommachar: ",",
-            defaultCommaInterval: 3
+            defaultW: "",
+            defaultD: "",
+            defaultK: 0,
+            defaultOverflowchar: "",
+            defaultPadchar: " "
         }
     },
     watch: {
         prefix() {
             this.creatDirective();
         },
-        mincol() {
+        w() {
+            this.creatDirective();
+        },
+        d() {
+            this.creatDirective();
+        },
+        k() {
+            this.creatDirective();
+        },
+        overflowchar() {
             this.creatDirective();
         },
         padchar() {
-            this.creatDirective();
-        },
-        commachar() {
-            this.creatDirective();
-        },
-        commaInterval() {
             this.creatDirective();
         }
     },
