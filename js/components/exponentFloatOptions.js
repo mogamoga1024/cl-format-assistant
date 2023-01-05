@@ -3,14 +3,18 @@ const ExponentFloatOptions = {
     template: `
         <label for="w">w:文字数</label>
         <input type="number" id="w" v-model="w"><br>
-        <label for="d">d:小数点以下の桁数</label>
+        <label for="d">d:仮数の小数点以下の桁数</label>
         <input type="number" id="d" v-model="d"><br>
-        <label for="k">k:引数を10^k倍にする</label>
+        <label for="e">e:指数部の桁数</label>
+        <input type="number" id="e" v-model="e"><br>
+        <label for="k">k:仮数の整数部の桁数</label>
         <input type="number" id="k" v-model="k"><br>
         <label for="overflowchar">overflowchar:wの文字数を超えたときに出力する文字</label>
         <input type="text" id="overflowchar" v-model="overflowchar"><br>
         <label for="padchar">padchar:パディングに利用する文字</label>
         <input type="text" id="padchar" v-model="padchar"><br>
+        <label for="exponentchar">exponentchar:仮数部と指数部の間の文字</label>
+        <input type="text" id="exponentchar" v-model="exponentchar"><br>
         修飾子<br>
         <input type="radio" id="option0" value="" v-model="prefix" />
         <label for="option0">なし</label><br>
@@ -24,14 +28,18 @@ const ExponentFloatOptions = {
             prefix: "",
             w: "",
             d: "",
-            k: 0,
+            e: "",
+            k: 1,
             overflowchar: "",
             padchar: " ",
-            defaultW: "",
-            defaultD: "",
-            defaultK: 0,
-            defaultOverflowchar: "",
-            defaultPadchar: " "
+            exponentchar: "e",
+            defalutW: "",
+            defalutD: "",
+            defalutE: "",
+            defalutK: 1,
+            defalutOverflowchar: "",
+            defalutPadchar: " ",
+            defalutExponentchar: "e"
         }
     },
     watch: {
@@ -44,6 +52,9 @@ const ExponentFloatOptions = {
         d() {
             this.creatDirective();
         },
+        e() {
+            this.creatDirective();
+        },
         k() {
             this.creatDirective();
         },
@@ -51,6 +62,9 @@ const ExponentFloatOptions = {
             this.creatDirective();
         },
         padchar() {
+            this.creatDirective();
+        },
+        exponentchar() {
             this.creatDirective();
         }
     },
