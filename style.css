@@ -5,6 +5,7 @@ body {
 
 #app {
   margin-top: 16px;
+  margin-bottom: 32px;
   margin-left: 24px;
   font-family: 'Hiragino Kaku Gothic ProN’, 'ヒラギノ角ゴ ProN W3’, 'Meiryo UI’, Meiryo, メイリオ, Osaka, 'MS PGothic’, arial, helvetica, sans-serif;
   font-size: 18px;
@@ -40,7 +41,7 @@ body {
 
 .other-directive-summary {
   display: inline-block;
-  min-width: 120px;
+  min-width: 240px;
 }
 
 #directive-summary {
