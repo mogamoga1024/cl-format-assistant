@@ -11,7 +11,7 @@
 <body>
   <div id="app">
     <div>
-      <button>~:チルダ</button>
+      <button @click="onTildaButtonClick">~:チルダ</button>
       <button>c:文字</button>
       <button>%:改行</button>
       <button>&:先頭以外改行</button>
@@ -33,7 +33,7 @@
     </div>
     <div>
       <div>結果</div>
-      <div>~5,2f</div>
+      <div>{{result}}</div>
     </div>
   </div>
   <script src="js/main.js"></script>

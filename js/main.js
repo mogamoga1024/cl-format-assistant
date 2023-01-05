@@ -1,12 +1,11 @@
 
-
 const viewModel = {
     components: {
         
     },
     data() {
         return {
-            
+            result: "~5.2f"
         }
     },
     computed: {
@@ -16,7 +15,9 @@ const viewModel = {
         
     },
     methods: {
-        
+        onTildaButtonClick() {
+            //this.result = "~~"
+        }
     }
 };
 
