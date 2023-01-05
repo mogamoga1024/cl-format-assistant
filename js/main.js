@@ -25,7 +25,8 @@ const App = {
                 "general-float": "g：小数（自動選択）",
                 "aesthetic": "a：汎用（美的）",
                 "standard": "s：汎用（標準）",
-            }
+            },
+            selectedOther: false
         }
     },
     created() {
@@ -33,6 +34,7 @@ const App = {
     },
     methods: {
         onDirectiveButtonClick(directiveName) {
+            this.selectedOther = false;
             const newCurrentDirectiveComponent = `${directiveName}-options`;
             if (this.currentDirectiveComponent === newCurrentDirectiveComponent) {
                 this.onClearButtonClick();

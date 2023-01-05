@@ -30,16 +30,21 @@
       <template v-for="name in ['aesthetic', 'standard']">
         <div class="button" @click="onDirectiveButtonClick(name)">{{directiveSummaryList[name]}}</div>
       </template>
-      <div class="button">その他</div>
+      <div class="button" @click="selectedOther = true">その他</div>
     </div>
-    <div id="result-container">
-      <div id="directive-summary">{{directiveSummary}}</div>
-      <div id="clear-button" class="button" @click="onClearButtonClick">初期化</div>
-      <div id="result">{{directive}}</div>
-    </div>
-    <div id="directive-options">
-      <component ref="directiveComponent" :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
-    </div>
+    <template v-if="selectedOther">
+      
+    </template>
+    <template v-else>
+      <div id="result-container">
+        <div id="directive-summary">{{directiveSummary}}</div>
+        <div id="clear-button" class="button" @click="onClearButtonClick">初期化</div>
+        <div id="result">{{directive}}</div>
+      </div>
+      <div id="directive-options">
+        <component ref="directiveComponent" :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
+      </div>
+    </template>
   </div>
   
   <script src="js/utils.js"></script>
