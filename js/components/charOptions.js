@@ -14,7 +14,9 @@ const CharOptions = {
             <label for="option3"><div class="prefix">:@</div>印字不可な文字を名称で出力し、Shiftキーについて言及する</label>
           </div>
         </div>
-        参考サイト: <a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_caa.htm" target="_blank" rel="noopener noreferrer">22.3.1.1 Tilde C: Character</a>
+        <div class="link">
+          参考サイト：<a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_caa.htm" target="_blank" rel="noopener noreferrer">22.3.1.1 Tilde C: Character</a>
+        </div>
     `,
     emits: ["createdDirective"],
     data() {

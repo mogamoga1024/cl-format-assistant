@@ -23,7 +23,9 @@ const createRadixOptions = function(_directiveChar, referenceTitle, referenceUrl
                 <label for="option3"><div class="prefix">:@</div>カンマ区切りし、正数のときに+の符号を出力する</label>
               </div>
             </div>
-            参考サイト: <a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
+            <div class="link">
+              参考サイト：<a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
+            </div>
         `,
         emits: ["createdDirective"],
         data() {

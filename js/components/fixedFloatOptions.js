@@ -20,7 +20,9 @@ const FixedFloatOptions = {
             <label for="option1">@ 正数のときに+の符号を出力する</label>
           </div>
         </div>
-        参考サイト: <a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_cca.htm" target="_blank" rel="noopener noreferrer">22.3.3.1 Tilde F: Fixed-Format Floating-Point</a>
+        <div class="link">
+          参考サイト：<a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_cca.htm" target="_blank" rel="noopener noreferrer">22.3.3.1 Tilde F: Fixed-Format Floating-Point</a>
+        </div>
     `,
     emits: ["createdDirective"],
     data() {

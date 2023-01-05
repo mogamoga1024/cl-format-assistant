@@ -23,7 +23,9 @@ const createPrinterOptions = function(_directiveChar, referenceTitle, referenceU
                 <label for="option3"><div class="prefix">:@</div>右寄せで出力し、かつnilは()と出力する</label>
               </div>
             </div>
-            参考サイト: <a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
+            <div class="link">
+              参考サイト：<a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
+            </div>
         `,
         emits: ["createdDirective"],
         data() {
