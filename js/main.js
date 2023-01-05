@@ -17,6 +17,10 @@ const App = {
     methods: {
         onTildaButtonClick() {
             //this.directive = "~~"
+        },
+        changeDirective(newDirective) {
+            console.log(newDirective);
+            this.directive = newDirective;
         }
     }
 };
