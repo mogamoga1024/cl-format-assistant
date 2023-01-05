@@ -1,5 +1,5 @@
 
-const createRadixOptions = function(_directiveChar) {
+const createRadixOptions = function(_directiveChar, referenceTitle, referenceUrl) {
     return  {
         template: `
             <label for="mincol">mincol:最小文字数</label>
@@ -18,7 +18,8 @@ const createRadixOptions = function(_directiveChar) {
             <input type="radio" id="option2" value="@" v-model="prefix" />
             <label for="option2">@ 正数のときに+の符号を出力する</label><br>
             <input type="radio" id="option3" value=":@" v-model="prefix" />
-            <label for="option3">:@ カンマ区切りし、正数のときに+の符号を出力する</label>
+            <label for="option3">:@ カンマ区切りし、正数のときに+の符号を出力する</label><br>
+            参考サイト: <a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
         `,
         emits: ["createdDirective"],
         data() {

@@ -1,9 +1,10 @@
 
-const createBasicOptions = function(_directiveChar) {
+const createBasicOptions = function(_directiveChar, referenceTitle, referenceUrl) {
     return {
         template: `
             <label for="n">n:繰り返し回数</label>
-            <input type="number" id="n" v-model="n">
+            <input type="number" id="n" v-model="n"><br>
+            参考サイト: <a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
         `,
         emits: ["createdDirective"],
         data() {
