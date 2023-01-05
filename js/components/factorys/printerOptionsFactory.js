@@ -10,15 +10,19 @@ const createPrinterOptions = function(_directiveChar, referenceTitle, referenceU
             <input type="number" id="minpad" v-model="minpad">パディングの最小回数<br>
             <label class="label" for="padchar">padchar</label>
             <input type="text" id="padchar" v-model="padchar">パディングに利用する文字<br>
-            修飾子<br>
-            <input type="radio" id="option0" value="" v-model="prefix" />
-            <label for="option0">なし</label><br>
-            <input type="radio" id="option1" value=":" v-model="prefix" />
-            <label for="option1">: nilを()と出力する</label><br>
-            <input type="radio" id="option2" value="@" v-model="prefix" />
-            <label for="option2">@ 右寄せで出力する</label><br>
-            <input type="radio" id="option3" value=":@" v-model="prefix" />
-            <label for="option3">:@ 右寄せで出力し、かつnilは()と出力する</label><br>
+            <div class="radio-container">
+              <div>修飾子</div>
+              <div>
+                <input type="radio" id="option0" value="" v-model="prefix" />
+                <label for="option0">なし</label><br>
+                <input type="radio" id="option1" value=":" v-model="prefix" />
+                <label for="option1">: nilを()と出力する</label><br>
+                <input type="radio" id="option2" value="@" v-model="prefix" />
+                <label for="option2">@ 右寄せで出力する</label><br>
+                <input type="radio" id="option3" value=":@" v-model="prefix" />
+                <label for="option3">:@ 右寄せで出力し、かつnilは()と出力する</label>
+              </div>
+            </div>
             参考サイト: <a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
         `,
         emits: ["createdDirective"],

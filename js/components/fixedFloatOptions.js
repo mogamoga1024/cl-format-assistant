@@ -11,11 +11,15 @@ const FixedFloatOptions = {
         <input type="text" id="overflowchar" v-model="overflowchar">wの文字数を超えたときに出力する文字<br>
         <label class="label" for="padchar">padchar</label>
         <input type="text" id="padchar" v-model="padchar">パディングに利用する文字<br>
-        修飾子<br>
-        <input type="radio" id="option0" value="" v-model="prefix" />
-        <label for="option0">なし</label><br>
-        <input type="radio" id="option1" value="@" v-model="prefix" />
-        <label for="option1">@ 正数のときに+の符号を出力する</label><br>
+        <div class="radio-container">
+          <div>修飾子</div>
+          <div>
+            <input type="radio" id="option0" value="" v-model="prefix" />
+            <label for="option0">なし</label><br>
+            <input type="radio" id="option1" value="@" v-model="prefix" />
+            <label for="option1">@ 正数のときに+の符号を出力する</label>
+          </div>
+        </div>
         参考サイト: <a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_cca.htm" target="_blank" rel="noopener noreferrer">22.3.3.1 Tilde F: Fixed-Format Floating-Point</a>
     `,
     emits: ["createdDirective"],

@@ -10,15 +10,19 @@ const createRadixOptions = function(_directiveChar, referenceTitle, referenceUrl
             <input type="text" id="commachar" v-model="commachar">カンマに利用する文字<br>
             <label class="label-large" for="comma-interval">comma-interval</label>
             <input type="number" id="comma-interval" v-model="commaInterval">カンマの間隔<br>
-            修飾子<br>
-            <input type="radio" id="option0" value="" v-model="prefix" />
-            <label for="option0">なし</label><br>
-            <input type="radio" id="option1" value=":" v-model="prefix" />
-            <label for="option1">: カンマ区切りする</label><br>
-            <input type="radio" id="option2" value="@" v-model="prefix" />
-            <label for="option2">@ 正数のときに+の符号を出力する</label><br>
-            <input type="radio" id="option3" value=":@" v-model="prefix" />
-            <label for="option3">:@ カンマ区切りし、正数のときに+の符号を出力する</label><br>
+            <div class="radio-container">
+              <div>修飾子</div>
+              <div>
+                <input type="radio" id="option0" value="" v-model="prefix" />
+                <label for="option0">なし</label><br>
+                <input type="radio" id="option1" value=":" v-model="prefix" />
+                <label for="option1">: カンマ区切りする</label><br>
+                <input type="radio" id="option2" value="@" v-model="prefix" />
+                <label for="option2">@ 正数のときに+の符号を出力する</label><br>
+                <input type="radio" id="option3" value=":@" v-model="prefix" />
+                <label for="option3">:@ カンマ区切りし、正数のときに+の符号を出力する</label>
+              </div>
+            </div>
             参考サイト: <a href="${referenceUrl}" target="_blank" rel="noopener noreferrer">${referenceTitle}</a>
         `,
         emits: ["createdDirective"],
