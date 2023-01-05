@@ -77,9 +77,9 @@ const ExponentFloatOptions = {
             const needD = this.d !== this.defaultD;
             const needE = this.e !== this.defaultE;
             const needK = this.k !== this.defaultK;
-            const needOverflowchar = this.overflowchar !== this.defaultOverflowchar;
-            const needPadchar = this.padchar !== this.defaultPadchar;
-            const needExponentchar = this.exponentchar !== this.defaultExponentchar;
+            const needOverflowchar = this.overflowchar !== this.defaultOverflowchar && this.overflowchar !== "";
+            const needPadchar = this.padchar !== this.defaultPadchar && this.padchar !== "";
+            const needExponentchar = this.exponentchar !== this.defaultExponentchar && this.exponentchar !== "";
 
             const w = needW ? this.w : "";
             const d = needD ? this.d : "";

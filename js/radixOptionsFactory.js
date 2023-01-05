@@ -58,8 +58,8 @@ const createRadixOptions = function(_directiveChar) {
         methods: {
             creatDirective() {
                 const needMincol = this.mincol !== this.defaultMincol;
-                const needPadchar = this.padchar !== this.defaultPadchar;
-                const needCommachar = this.commachar !== this.defaultCommachar;
+                const needPadchar = this.padchar !== this.defaultPadchar && this.padchar !== "";
+                const needCommachar = this.commachar !== this.defaultCommachar && this.commachar !== "";
                 const needCommaInterval = this.commaInterval !== this.defaultCommaInterval;
     
                 const mincol = needMincol ? this.mincol : "";

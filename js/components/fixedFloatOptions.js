@@ -62,8 +62,8 @@ const FixedFloatOptions = {
             const needW = this.w !== this.defaultW;
             const needD = this.d !== this.defaultD;
             const needK = this.k !== this.defaultK;
-            const needOverflowchar = this.overflowchar !== this.defaultOverflowchar;
-            const needPadchar = this.padchar !== this.defaultPadchar;
+            const needOverflowchar = this.overflowchar !== this.defaultOverflowchar && this.overflowchar !== "";
+            const needPadchar = this.padchar !== this.defaultPadchar && this.padchar !== "";
 
             const w = needW ? this.w : "";
             const d = needD ? this.d : "";
