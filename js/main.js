@@ -6,6 +6,9 @@ const App = {
         NewLineOptions,
         FreshLineOptions,
         DecimalOptions,
+        BinaryOptions,
+        OctalOptions,
+        HexadecimalOptions,
     },
     data() {
         return {
