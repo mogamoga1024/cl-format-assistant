@@ -32,9 +32,9 @@
       <div class="button" @click="onDirectiveButtonClick('standard')">s：汎用（標準）</div>
       <div class="button">その他</div>
     </div>
-    <div id="result">
+    <div id="result-container">
       <div>結果</div>
-      <div>{{directive}}</div>
+      <div id="result">{{directive}}</div>
     </div>
     <div id="directive-options">
       <component :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
