@@ -9,7 +9,8 @@ const CharOptions = {
         <input type="radio" id="option2" value="@" v-model="prefix" />
         <label for="option2">@ プレフィックスに#\\をつける</label><br>
         <input type="radio" id="option3" value=":@" v-model="prefix" />
-        <label for="option3">:@ 印字不可な文字を名称で出力し、Shiftキーについて言及する</label>
+        <label for="option3">:@ 印字不可な文字を名称で出力し、Shiftキーについて言及する</label><br>
+        参考サイト: <a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_caa.htm" target="_blank" rel="noopener noreferrer">22.3.1.1 Tilde C: Character</a>
     `,
     emits: ["createdDirective"],
     data() {
