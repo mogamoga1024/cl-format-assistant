@@ -11,6 +11,7 @@ const App = {
         HexadecimalOptions,
         FixedFloatOptions,
         ExponentFloatOptions,
+        GeneralFloatOptions,
     },
     data() {
         return {
