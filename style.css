@@ -29,8 +29,18 @@ body {
   margin-top: 16px;
 }
 
-#result-container {
+#result-container, #other {
   margin-top: 16px;
+}
+
+#other-description {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.other-directive-summary {
+  display: inline-block;
+  min-width: 120px;
 }
 
 #directive-summary {
@@ -51,21 +61,20 @@ body {
   background-color: #ffd8b2;
 }
 
-label {
-  display: inline-block;
-}
-
 .label-small {
+  display: inline-block;
   min-width: 30px;
   font-weight: bold;
 }
 
 .label {
+  display: inline-block;
   min-width: 132px;
   font-weight: bold;
 }
 
 .label-large {
+  display: inline-block;
   min-width: 152px;
   font-weight: bold;
 }
@@ -99,6 +108,10 @@ input[type="number"], input[type="text"] {
 
 .radio-option {
   display: flex;  
+}
+
+.radio-option label {
+  margin-left: 8px;
 }
 
 input[type="radio"] {

@@ -32,9 +32,12 @@
       </template>
       <div class="button" @click="selectedOther = true">その他</div>
     </div>
-    <template v-if="selectedOther">
-      
-    </template>
+    <div id="other" v-if="selectedOther">
+      <div id="other-description">本ツールで対応外のdirective達の紹介</div>
+      <div class="other-directive-summary">~|：改ページ</div>
+      <a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_cad.htm" target="_blank" rel="noopener noreferrer">
+        22.3.1.4 Tilde Vertical-Bar: Page</a>
+    </div>
     <template v-else>
       <div id="result-container">
         <div id="directive-summary">{{directiveSummary}}</div>
