@@ -9,5 +9,10 @@ const TildaOptions = {
             n: 1
         }
     },
+    watch: {
+        n(newValue, oldValue) {
+            console.log(newValue, oldValue);
+        }
+    }
 };
 
