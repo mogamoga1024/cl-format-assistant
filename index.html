@@ -6,30 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cl-format-assistant</title>
   <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app">
-    <div>
-      <button @click="onDirectiveButtonClick('tilda')">~:チルダ</button>
-      <button @click="onDirectiveButtonClick('char')">c:文字</button>
-      <button @click="onDirectiveButtonClick('new-line')">%:改行</button>
-      <button @click="onDirectiveButtonClick('fresh-line')">&:先頭以外改行</button>
-    </div>
-    <div>
-      <button @click="onDirectiveButtonClick('decimal')">d:整数（10進数）</button>
-      <button @click="onDirectiveButtonClick('binary')">b:整数（2進数）</button>
-      <button @click="onDirectiveButtonClick('octal')">o:整数（8進数）</button>
-      <button @click="onDirectiveButtonClick('hexadecimal')">x:整数（16進数）</button>
-    </div>
-    <div>
-      <button @click="onDirectiveButtonClick('fixed-float')">f:小数（固定小数点）</button>
-      <button @click="onDirectiveButtonClick('exponent-float')">e:小数（指数）</button>
-      <button @click="onDirectiveButtonClick('general-float')">g:小数（自動選択）</button>
-    </div>
-    <div>
-      <button @click="onDirectiveButtonClick('aesthetic')">a:汎用（きれい）</button>
-      <button @click="onDirectiveButtonClick('standard')">s:汎用（標準）</button>
+  <div id="app" class="container">
+    <div id="directive-buttons-container">
+      <div>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('tilda')">~：チルダ</button>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('char')">c：文字</button>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('new-line')">%：改行</button>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('fresh-line')">&：先頭以外改行</button>
+      </div>
+      <div>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('decimal')">d：整数（10進数）</button>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('binary')">b：整数（2進数）</button>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('octal')">o：整数（8進数）</button>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('hexadecimal')">x：整数（16進数）</button>
+      </div>
+      <div>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('fixed-float')">f：小数（固定小数点）</button>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('exponent-float')">e：小数（指数）</button>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('general-float')">g：小数（自動選択）</button>
+      </div>
+      <div>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('aesthetic')">a：汎用（きれい）</button>
+        <button class="button is-info is-light" @click="onDirectiveButtonClick('standard')">s：汎用（標準）</button>
+      </div>
     </div>
     <component :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
     <div>
