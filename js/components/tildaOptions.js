@@ -4,6 +4,7 @@ const TildaOptions = {
         <label for="n">n:繰り返し回数</label>
         <input type="number" id="n" v-model="n">
     `,
+    emits: ["createdDirective"],
     data() {
         return {
             n: 1,
@@ -12,12 +13,13 @@ const TildaOptions = {
     },
     watch: {
         n(value) {
-            
+            creatDirective();
         }
     },
     methods: {
-        createdDirective() {
-            
+        creatDirective() {
+            const directive = `~${n}~`;
+            $emit("createdDirective", directive);
         }
     }
 };
