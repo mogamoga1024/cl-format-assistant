@@ -69,6 +69,10 @@ input[type="number"], input[type="text"] {
   margin-top: 16px;
 }
 
+.radio-label {
+  min-width: 56px;
+}
+
 .radio {
   margin-left: 8px;
 }

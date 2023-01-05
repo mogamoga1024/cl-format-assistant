@@ -17,7 +17,7 @@ const createFloatOptions = function(_directiveChar, referenceTitle, referenceUrl
             <label class="label" for="exponentchar">exponentchar</label>
             <input type="text" id="exponentchar" v-model="exponentchar" maxlength="1"><div class="description">仮数部と指数部の間の文字</div><br>
             <div class="radio-container">
-              <div>修飾子</div>
+              <div class="radio-label">修飾子</div>
               <div class="radio">
                 <input type="radio" id="option0" value="" v-model="prefix" />
                 <label for="option0">なし</label><br>

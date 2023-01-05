@@ -12,7 +12,7 @@ const FixedFloatOptions = {
         <label class="label" for="padchar">padchar</label>
         <input type="text" id="padchar" v-model="padchar" maxlength="1"><div class="description">パディングに利用する文字</div><br>
         <div class="radio-container">
-          <div>修飾子</div>
+          <div class="radio-label">修飾子</div>
           <div class="radio">
             <input type="radio" id="option0" value="" v-model="prefix" />
             <label for="option0">なし</label><br>

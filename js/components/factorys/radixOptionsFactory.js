@@ -11,7 +11,7 @@ const createRadixOptions = function(_directiveChar, referenceTitle, referenceUrl
             <label class="label-large" for="comma-interval">comma-interval</label>
             <input type="number" id="comma-interval" v-model="commaInterval" min="1"><div class="description">カンマの間隔</div><br>
             <div class="radio-container">
-              <div>修飾子</div>
+              <div class="radio-label">修飾子</div>
               <div class="radio">
                 <input type="radio" id="option0" value="" v-model="prefix" />
                 <label for="option0">なし</label><br>
