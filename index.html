@@ -11,25 +11,24 @@
 <body>
   <div id="app">
     <div>
-      <div class="button" @click="onDirectiveButtonClick('tilda')">{{directiveSummaryList["tilda"]}}</div>
-      <div class="button" @click="onDirectiveButtonClick('char')">{{directiveSummaryList["char"]}}</div>
-      <div class="button" @click="onDirectiveButtonClick('new-line')">{{directiveSummaryList["new-line"]}}</div>
-      <div class="button" @click="onDirectiveButtonClick('fresh-line')">{{directiveSummaryList["fresh-line"]}}</div>
+      <template v-for="name in ['tilda', 'char', 'new-line', 'fresh-line']">
+        <div class="button" @click="onDirectiveButtonClick(name)">{{directiveSummaryList[name]}}</div>
+      </template>
     </div>
     <div>
-      <div class="button" @click="onDirectiveButtonClick('decimal')">{{directiveSummaryList["decimal"]}}</div>
-      <div class="button" @click="onDirectiveButtonClick('binary')">{{directiveSummaryList["binary"]}}</div>
-      <div class="button" @click="onDirectiveButtonClick('octal')">{{directiveSummaryList["octal"]}}</div>
-      <div class="button" @click="onDirectiveButtonClick('hexadecimal')">{{directiveSummaryList["hexadecimal"]}}</div>
+      <template v-for="name in ['decimal', 'binary', 'octal', 'hexadecimal']">
+        <div class="button" @click="onDirectiveButtonClick(name)">{{directiveSummaryList[name]}}</div>
+      </template>
     </div>
     <div>
-      <div class="button" @click="onDirectiveButtonClick('fixed-float')">{{directiveSummaryList["fixed-float"]}}</div>
-      <div class="button" @click="onDirectiveButtonClick('exponent-float')">{{directiveSummaryList["exponent-float"]}}</div>
-      <div class="button" @click="onDirectiveButtonClick('general-float')">{{directiveSummaryList["general-float"]}}</div>
+      <template v-for="name in ['fixed-float', 'exponent-float', 'general-float']">
+        <div class="button" @click="onDirectiveButtonClick(name)">{{directiveSummaryList[name]}}</div>
+      </template>
     </div>
     <div>
-      <div class="button" @click="onDirectiveButtonClick('aesthetic')">{{directiveSummaryList["aesthetic"]}}</div>
-      <div class="button" @click="onDirectiveButtonClick('standard')">{{directiveSummaryList["standard"]}}</div>
+      <template v-for="name in ['aesthetic', 'standard']">
+        <div class="button" @click="onDirectiveButtonClick(name)">{{directiveSummaryList[name]}}</div>
+      </template>
       <div class="button">その他</div>
     </div>
     <div id="result-container">
