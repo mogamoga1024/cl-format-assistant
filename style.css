@@ -29,9 +29,15 @@
   margin-top: 16px;
 }
 
+.label {
+  display: inline-block;
+  width: 120px;
+}
+
 input[type="number"] {
   width: 50px;
   margin-left: 8px;
+  margin-right: 8px;
   font-size: 18px;
   border: solid 1px #ccc;
 }
@@ -39,6 +45,7 @@ input[type="number"] {
 input[type="text"] {
   width: 50px;
   margin-left: 8px;
+  margin-right: 8px;
   font-size: 18px;
   border: solid 1px #ccc;
 }
