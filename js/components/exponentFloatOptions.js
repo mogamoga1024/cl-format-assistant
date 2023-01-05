@@ -33,13 +33,13 @@ const ExponentFloatOptions = {
             overflowchar: "",
             padchar: " ",
             exponentchar: "e",
-            defalutW: "",
-            defalutD: "",
-            defalutE: "",
-            defalutK: 1,
-            defalutOverflowchar: "",
-            defalutPadchar: " ",
-            defalutExponentchar: "e"
+            defaultW: "",
+            defaultD: "",
+            defaultE: "",
+            defaultK: 1,
+            defaultOverflowchar: "",
+            defaultPadchar: " ",
+            defaultExponentchar: "e"
         }
     },
     watch: {
@@ -75,31 +75,41 @@ const ExponentFloatOptions = {
         creatDirective() {
             const needW = this.w !== this.defaultW;
             const needD = this.d !== this.defaultD;
+            const needE = this.e !== this.defaultE;
             const needK = this.k !== this.defaultK;
             const needOverflowchar = this.overflowchar !== this.defaultOverflowchar;
             const needPadchar = this.padchar !== this.defaultPadchar;
+            const needExponentchar = this.exponentchar !== this.defaultExponentchar;
 
             const w = needW ? this.w : "";
             const d = needD ? this.d : "";
+            const e = needE ? this.e : "";
             const k = needK ? this.k : "";
             const overflowchar = needOverflowchar ? charEscape(this.overflowchar) : "";
-            const padchar = charEscape(this.padchar);
+            const padchar = needPadchar ? charEscape(this.padchar) : "";
+            const exponentchar = charEscape(this.exponentchar);
 
             let directive = `~${this.prefix}`;
-            if (needW && !needD && !needK && !needOverflowchar && !needPadchar) {
+            if (needW && !needD && !needE && !needK && !needOverflowchar && !needPadchar && !needExponentchar) {
                 directive += `${w}`;
             }
-            else if (needD && !needK && !needOverflowchar && !needPadchar) {
+            else if (needD && !needE && !needK && !needOverflowchar && !needPadchar && !needExponentchar) {
                 directive += `${w},${d}`;
             }
-            else if (needK && !needOverflowchar && !needPadchar) {
-                directive += `${w},${d},${k}`;
+            else if (needE && !needK && !needOverflowchar && !needPadchar && !needExponentchar) {
+                directive += `${w},${d},${e}`;
             }
-            else if (needOverflowchar && !needPadchar) {
-                directive += `${w},${d},${k},${overflowchar}`;
+            else if (needK && !needOverflowchar && !needPadchar && !needExponentchar) {
+                directive += `${w},${d},${e},${k}`;
             }
-            else if (needPadchar) {
-                directive += `${w},${d},${k},${overflowchar},${padchar}`;
+            else if (needOverflowchar && !needPadchar && !needExponentchar) {
+                directive += `${w},${d},${e},${k},${overflowchar}`;
+            }
+            else if (needPadchar && !needExponentchar) {
+                directive += `${w},${d},${e},${k},${overflowchar},${padchar}`;
+            }
+            else if (needExponentchar) {
+                directive += `${w},${d},${e},${k},${overflowchar},${padchar},${exponentchar}`;
             }
             directive += this.directiveChar;
 
