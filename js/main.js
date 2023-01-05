@@ -1,19 +1,10 @@
 
 const App = {
     components: {
-        TildaOptions,
-        CharOptions,
-        NewLineOptions,
-        FreshLineOptions,
-        DecimalOptions,
-        BinaryOptions,
-        OctalOptions,
-        HexadecimalOptions,
-        FixedFloatOptions,
-        ExponentFloatOptions,
-        GeneralFloatOptions,
-        AestheticOptions,
-        StandardOptions
+        TildaOptions, CharOptions, NewLineOptions, FreshLineOptions,
+        DecimalOptions, BinaryOptions, OctalOptions, HexadecimalOptions,
+        FixedFloatOptions, ExponentFloatOptions, GeneralFloatOptions,
+        AestheticOptions, StandardOptions
     },
     data() {
         return {
