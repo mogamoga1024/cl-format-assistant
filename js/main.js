@@ -33,8 +33,14 @@ const App = {
     },
     methods: {
         onDirectiveButtonClick(directiveName) {
-            this.directiveSummary = this.directiveSummaryList[directiveName];
-            this.currentDirectiveComponent = `${directiveName}-options`;
+            const newCurrentDirectiveComponent = `${directiveName}-options`;
+            if (this.currentDirectiveComponent === newCurrentDirectiveComponent) {
+                this.onClearButtonClick();
+            }
+            else {
+                this.directiveSummary = this.directiveSummaryList[directiveName];
+                this.currentDirectiveComponent = newCurrentDirectiveComponent;
+            }
         },
         onClearButtonClick() {
             this.$refs.directiveComponent.clear();
