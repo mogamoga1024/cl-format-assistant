@@ -1,7 +1,7 @@
 
 const viewModel = {
     components: {
-        
+        TildaOptions
     },
     data() {
         return {
