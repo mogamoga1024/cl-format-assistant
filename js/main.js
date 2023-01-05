@@ -23,7 +23,7 @@ const App = {
                 "fixed-float": "f：小数（固定小数点）",
                 "exponent-float": "e：小数（指数）",
                 "general-float": "g：小数（自動選択）",
-                "aesthetic": "a：汎用（きれい）",
+                "aesthetic": "a：汎用（美的）",
                 "standard": "s：汎用（標準）",
             }
         }
