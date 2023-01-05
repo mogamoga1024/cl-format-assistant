@@ -48,21 +48,22 @@ const DecimalOptions = {
             const needCommaInterval = this.commaInterval !== this.defaultCommaInterval;
 
             const mincol = needMincol ? this.mincol : "";
-            const padchar = needPadchar ? this.padchar : "";
-            const commachar = needCommachar ? this.commachar : "";
+            const padchar = needPadchar ? charEscape(this.padchar) : "";
+            const commachar = needCommachar ? charEscape(this.commachar) : "";
+            const commaInterval = this.commaInterval;
 
             let directive = `~d`;
             if (needMincol && !needPadchar && !needCommachar && !needCommaInterval) {
-                directive = `~${this.mincol}d`;
+                directive = `~${mincol}d`;
             }
             else if (needPadchar && !needCommachar && !needCommaInterval) {
-                directive = `~${mincol},${this.padchar}d`;
+                directive = `~${mincol},${padchar}d`;
             }
             else if (needCommachar && !needCommaInterval) {
-                directive = `~${mincol},${padchar},${this.commachar}d`;
+                directive = `~${mincol},${padchar},${commachar}d`;
             }
             else if (needCommaInterval) {
-                directive = `~${mincol},${padchar},${commachar},${this.commaInterval}d`;
+                directive = `~${mincol},${padchar},${commachar},${commaInterval}d`;
             }
 
             this.$emit("createdDirective", directive);
