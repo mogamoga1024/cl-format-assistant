@@ -17,10 +17,10 @@
       <button @click="onDirectiveButtonClick('fresh-line')">&:先頭以外改行</button>
     </div>
     <div>
-      <button>d:整数（10進数）</button>
-      <button>b:整数（2進数）</button>
-      <button>o:整数（8進数）</button>
-      <button>x:整数（16進数）</button>
+      <button @click="onDirectiveButtonClick('decimal')">d:整数（10進数）</button>
+      <button @click="onDirectiveButtonClick('binary')">b:整数（2進数）</button>
+      <button @click="onDirectiveButtonClick('octal')">o:整数（8進数）</button>
+      <button @click="onDirectiveButtonClick('hexadecimal')">x:整数（16進数）</button>
     </div>
     <div>
       <button>f:小数（固定小数点）</button>
@@ -41,6 +41,7 @@
   <script src="js/components/charOptions.js"></script>
   <script src="js/components/newLineOptions.js"></script>
   <script src="js/components/freshLineOptions.js"></script>
+  <script src="js/components/decimalOptions.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@ const App = {
         CharOptions,
         NewLineOptions,
         FreshLineOptions,
+        DecimalOptions,
     },
     data() {
         return {
