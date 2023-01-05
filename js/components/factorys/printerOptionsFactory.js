@@ -3,13 +3,13 @@ const createPrinterOptions = function(_directiveChar, referenceTitle, referenceU
     return  {
         template: `
             <label class="label" for="mincol">mincol</label>
-            <input type="number" id="mincol" v-model="mincol">最小文字数<br>
+            <input type="number" id="mincol" v-model="mincol" min="0">最小文字数<br>
             <label class="label" for="colinc">colinc</label>
-            <input type="number" id="colinc" v-model="colinc">1回のパディングでpadcharを利用する回数<br>
+            <input type="number" id="colinc" v-model="colinc" min="1">1回のパディングでpadcharを利用する回数<br>
             <label class="label" for="minpad">minpad</label>
-            <input type="number" id="minpad" v-model="minpad">パディングの最小回数<br>
+            <input type="number" id="minpad" v-model="minpad" min="0">パディングの最小回数<br>
             <label class="label" for="padchar">padchar</label>
-            <input type="text" id="padchar" v-model="padchar">パディングに利用する文字<br>
+            <input type="text" id="padchar" v-model="padchar" maxlength="1">パディングに利用する文字<br>
             <div class="radio-container">
               <div>修飾子</div>
               <div>

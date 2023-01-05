@@ -2,15 +2,15 @@
 const FixedFloatOptions = {
     template: `
         <label class="label" for="w">w</label>
-        <input type="number" id="w" v-model="w">文字数<br>
+        <input type="number" id="w" v-model="w" min="1">文字数<br>
         <label class="label" for="d">d</label>
-        <input type="number" id="d" v-model="d">小数点以下の桁数<br>
+        <input type="number" id="d" v-model="d" min="0">小数点以下の桁数<br>
         <label class="label" for="k">k</label>
         <input type="number" id="k" v-model="k">引数を10^k倍にする<br>
         <label class="label" for="overflowchar">overflowchar</label>
-        <input type="text" id="overflowchar" v-model="overflowchar">wの文字数を超えたときに出力する文字<br>
+        <input type="text" id="overflowchar" v-model="overflowchar" maxlength="1">wの文字数を超えたときに出力する文字<br>
         <label class="label" for="padchar">padchar</label>
-        <input type="text" id="padchar" v-model="padchar">パディングに利用する文字<br>
+        <input type="text" id="padchar" v-model="padchar" maxlength="1">パディングに利用する文字<br>
         <div class="radio-container">
           <div>修飾子</div>
           <div>
