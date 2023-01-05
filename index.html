@@ -11,29 +11,29 @@
 <body>
   <div id="app">
     <div>
-      <div class="button" @click="onDirectiveButtonClick('tilda')">~：チルダ</div>
-      <div class="button" @click="onDirectiveButtonClick('char')">c：文字</div>
-      <div class="button" @click="onDirectiveButtonClick('new-line')">%：改行</div>
-      <div class="button" @click="onDirectiveButtonClick('fresh-line')">&：先頭以外改行</div>
+      <div class="button" @click="onDirectiveButtonClick('tilda')">{{directiveSummaryList["tilda"]}}</div>
+      <div class="button" @click="onDirectiveButtonClick('char')">{{directiveSummaryList["char"]}}</div>
+      <div class="button" @click="onDirectiveButtonClick('new-line')">{{directiveSummaryList["new-line"]}}</div>
+      <div class="button" @click="onDirectiveButtonClick('fresh-line')">{{directiveSummaryList["fresh-line"]}}</div>
     </div>
     <div>
-      <div class="button" @click="onDirectiveButtonClick('decimal')">d：整数（10進数）</div>
-      <div class="button" @click="onDirectiveButtonClick('binary')">b：整数（2進数）</div>
-      <div class="button" @click="onDirectiveButtonClick('octal')">o：整数（8進数）</div>
-      <div class="button" @click="onDirectiveButtonClick('hexadecimal')">x：整数（16進数）</div>
+      <div class="button" @click="onDirectiveButtonClick('decimal')">{{directiveSummaryList["decimal"]}}</div>
+      <div class="button" @click="onDirectiveButtonClick('binary')">{{directiveSummaryList["binary"]}}</div>
+      <div class="button" @click="onDirectiveButtonClick('octal')">{{directiveSummaryList["octal"]}}</div>
+      <div class="button" @click="onDirectiveButtonClick('hexadecimal')">{{directiveSummaryList["hexadecimal"]}}</div>
     </div>
     <div>
-      <div class="button" @click="onDirectiveButtonClick('fixed-float')">f：小数（固定小数点）</div>
-      <div class="button" @click="onDirectiveButtonClick('exponent-float')">e：小数（指数）</div>
-      <div class="button" @click="onDirectiveButtonClick('general-float')">g：小数（自動選択）</div>
+      <div class="button" @click="onDirectiveButtonClick('fixed-float')">{{directiveSummaryList["fixed-float"]}}</div>
+      <div class="button" @click="onDirectiveButtonClick('exponent-float')">{{directiveSummaryList["exponent-float"]}}</div>
+      <div class="button" @click="onDirectiveButtonClick('general-float')">{{directiveSummaryList["general-float"]}}</div>
     </div>
     <div>
-      <div class="button" @click="onDirectiveButtonClick('aesthetic')">a：汎用（きれい）</div>
-      <div class="button" @click="onDirectiveButtonClick('standard')">s：汎用（標準）</div>
+      <div class="button" @click="onDirectiveButtonClick('aesthetic')">{{directiveSummaryList["aesthetic"]}}</div>
+      <div class="button" @click="onDirectiveButtonClick('standard')">{{directiveSummaryList["standard"]}}</div>
       <div class="button">その他</div>
     </div>
     <div id="result-container">
-      <div>結果</div>
+      <div id="directive-summary">{{directiveSummary}}</div>
       <div id="result">{{directive}}</div>
     </div>
     <div id="directive-options">
