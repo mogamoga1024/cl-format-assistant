@@ -31,7 +31,7 @@
       <button>a:汎用（きれい）</button>
       <button>s:汎用（標準）</button>
     </div>
-    <tilda-options @created-directive="changeDirective"></tilda-options>
+    <component :is="currentDirectiveComponent" @created-directive="changeDirective"></component>
     <div>
       <div>結果</div>
       <div>{{directive}}</div>

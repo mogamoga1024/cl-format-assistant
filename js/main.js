@@ -5,7 +5,8 @@ const App = {
     },
     data() {
         return {
-            directive: "~5.2f"
+            directive: "~5.2f",
+            currentDirectiveComponent: "tilda-options"
         }
     },
     computed: {
