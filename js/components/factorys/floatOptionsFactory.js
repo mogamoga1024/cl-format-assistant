@@ -111,7 +111,7 @@ const createFloatOptions = function(_directiveChar, referenceTitle, referenceUrl
                 const padchar = needPadchar ? charEscape(this.padchar) : "";
                 const exponentchar = charEscape(this.exponentchar);
     
-                let directive = `~${this.prefix}`;
+                let directive = "~";
                 if (needW && !needD && !needE && !needK && !needOverflowchar && !needPadchar && !needExponentchar) {
                     directive += `${w}`;
                 }
@@ -133,7 +133,7 @@ const createFloatOptions = function(_directiveChar, referenceTitle, referenceUrl
                 else if (needExponentchar) {
                     directive += `${w},${d},${e},${k},${overflowchar},${padchar},${exponentchar}`;
                 }
-                directive += this.directiveChar;
+                directive += `${this.prefix}${this.directiveChar}`;
     
                 this.$emit("createdDirective", directive);
             }

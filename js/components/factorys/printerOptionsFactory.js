@@ -89,7 +89,7 @@ const createPrinterOptions = function(_directiveChar, referenceTitle, referenceU
                 const minpad = needMinpad ? this.minpad : "";
                 const padchar = charEscape(this.padchar);
     
-                let directive = `~${this.prefix}`;
+                let directive = "~";
                 if (needMincol && !needColinc && !needMinpad && !needPadchar) {
                     directive += `${mincol}`;
                 }
@@ -102,7 +102,7 @@ const createPrinterOptions = function(_directiveChar, referenceTitle, referenceU
                 else if (needPadchar) {
                     directive += `${mincol},${colinc},${minpad},${padchar}`;
                 }
-                directive += this.directiveChar;
+                directive += `${this.prefix}${this.directiveChar}`;
     
                 this.$emit("createdDirective", directive);
             }

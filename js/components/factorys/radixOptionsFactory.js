@@ -89,7 +89,7 @@ const createRadixOptions = function(_directiveChar, referenceTitle, referenceUrl
                 const commachar = needCommachar ? charEscape(this.commachar) : "";
                 const commaInterval = this.commaInterval;
     
-                let directive = `~${this.prefix}`;
+                let directive = "~";
                 if (needMincol && !needPadchar && !needCommachar && !needCommaInterval) {
                     directive += `${mincol}`;
                 }
@@ -102,7 +102,7 @@ const createRadixOptions = function(_directiveChar, referenceTitle, referenceUrl
                 else if (needCommaInterval) {
                     directive += `${mincol},${padchar},${commachar},${commaInterval}`;
                 }
-                directive += this.directiveChar;
+                directive += `${this.prefix}${this.directiveChar}`;
     
                 this.$emit("createdDirective", directive);
             }

@@ -90,7 +90,7 @@ const FixedFloatOptions = {
             const overflowchar = needOverflowchar ? charEscape(this.overflowchar) : "";
             const padchar = charEscape(this.padchar);
 
-            let directive = `~${this.prefix}`;
+            let directive = "~";
             if (needW && !needD && !needK && !needOverflowchar && !needPadchar) {
                 directive += `${w}`;
             }
@@ -106,7 +106,7 @@ const FixedFloatOptions = {
             else if (needPadchar) {
                 directive += `${w},${d},${k},${overflowchar},${padchar}`;
             }
-            directive += this.directiveChar;
+            directive += `${this.prefix}${this.directiveChar}`;
 
             this.$emit("createdDirective", directive);
         }
